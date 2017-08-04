@@ -1,0 +1,70 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83> a dcat:Dataset ;
+    dct:identifier "feec8014-10d0-47c1-9f4d-eed33dc68d83" ;
+    dct:issued "2010-08-23T13:45:00.836912"^^xsd:dateTime ;
+    dct:modified "2016-07-30T07:54:26.629034"^^xsd:dateTime ;
+    dct:publisher <https://datahub.io/organization/ce086ef6-9e56-4af1-a63c-fd768fa2dfff> ;
+    dct:title "IEEE Papers (RKBExplorer)" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "Hugh Glaser" ;
+            vcard:hasEmail "hg@ecs.soton.ac.uk" ] ;
+    dcat:distribution <https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/326f75fa-6a3d-4fa7-9f4c-40beb671600a>,
+        <https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/3614a6bc-96c3-40a8-85e9-c80356a5f4da>,
+        <https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/55544720-70b9-4aae-b055-ef6111515514>,
+        <https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/79633a5f-b262-4003-900a-240171f31bcc>,
+        <https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/a21ae558-a78c-4de0-aeb3-065dff8b216a> ;
+    dcat:keyword "deref-vocab",
+        "format-rdf",
+        "lod",
+        "lodcloud-diagram-2011-09-19",
+        "lodcloud-diagram-2014-08-30",
+        "no-license-metadata",
+        "no-vocab-mappings",
+        "provenance-metadata",
+        "publications",
+        "published-by-third-party",
+        "void-sparql-endpoint" ;
+    dcat:landingPage <http://ieee.rkbexplorer.com> .
+
+<https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/326f75fa-6a3d-4fa7-9f4c-40beb671600a> a dcat:Distribution ;
+    dct:description "XML Sitemap" ;
+    dcat:accessURL <http://ieee.rkbexplorer.com/sitemap.xml> ;
+    dcat:mediaType "meta/sitemap" .
+
+<https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/3614a6bc-96c3-40a8-85e9-c80356a5f4da> a dcat:Distribution ;
+    dct:description "voiD file" ;
+    dcat:accessURL <http://ieee.rkbexplorer.com/models/void.ttl> ;
+    dcat:mediaType "meta/void" .
+
+<https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/55544720-70b9-4aae-b055-ef6111515514> a dcat:Distribution ;
+    dct:format "RDF" ;
+    dct:title "Download (tar gzip of RDF)" ;
+    dcat:accessURL <http://ieee.rkbexplorer.com/models/dump.tgz> .
+
+<https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/79633a5f-b262-4003-900a-240171f31bcc> a dcat:Distribution ;
+    dct:description "Example (RDF/XML)" ;
+    dcat:accessURL <http://ieee.rkbexplorer.com/id/person-21757c2767705194600b55ff6b0ef692-1e427d6bbb6d2bb2aa5434059d6c58f4> ;
+    dcat:mediaType "example/rdf+xml" .
+
+<https://datahub.io/dataset/feec8014-10d0-47c1-9f4d-eed33dc68d83/resource/a21ae558-a78c-4de0-aeb3-065dff8b216a> a dcat:Distribution ;
+    dct:description "SPARQL endpoint" ;
+    dcat:accessURL <http://ieee.rkbexplorer.com/sparql/> ;
+    dcat:mediaType "api/sparql" .
+
+<https://datahub.io/organization/ce086ef6-9e56-4af1-a63c-fd768fa2dfff> a foaf:Organization ;
+    foaf:name "Linking Open Data Cloud" .

@@ -2,6 +2,8 @@ package org.aksw.rdfunit.io.reader;
 
 import org.apache.jena.query.Dataset;
 import org.apache.jena.rdf.model.Model;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 
@@ -14,6 +16,10 @@ import java.util.Collection;
  * @version $Id: $Id
  */
 public class RdfFirstSuccessReader implements RdfReader {
+
+    /*MD*/  private static final Logger LOGGER = LoggerFactory.getLogger(RdfFirstSuccessReader.class);
+
+    /*MD*/  int count = 0;
 
     private final Collection<RdfReader> readers;
 
@@ -32,12 +38,23 @@ public class RdfFirstSuccessReader implements RdfReader {
     public void read(Model model) throws RdfReaderException {
         StringBuilder message = new StringBuilder();
         // return the first successful attempt
+
+        /*MD*/  LOGGER.info( "Total " + readers.size() + " readers");
+
         for (RdfReader r : readers) {
+
+            /*MD*/  count++;
+            /*MD*/  LOGGER.info( "No." + count + ", reading " + r.getRdfReaderName() );
+
             try {
+
                 r.read(model);
                 // return on first read() that does not throw an exception
                 return;
             } catch (RdfReaderException e) {
+
+                /*MD*/  LOGGER.info( "No." + count + ", reading entries catch");
+
                 message.append('\n');
                 if (e.getMessage() != null) {
                     message.append(e.getMessage());

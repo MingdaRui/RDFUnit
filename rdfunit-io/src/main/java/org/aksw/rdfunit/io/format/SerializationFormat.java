@@ -19,9 +19,9 @@ public class SerializationFormat {
      */
     private final String name;
 
-    private final SerializationFormatIOType ioType;
+    private final SerializationFormatIOType ioType; // enum {input, output, inputAndOutput}
 
-    private final SerializationFormatGraphType graphType;
+    private final SerializationFormatGraphType graphType; // enum {singleGraph, dataset}
 
     /**
      * The default extension e.g. "ttl" for turtle

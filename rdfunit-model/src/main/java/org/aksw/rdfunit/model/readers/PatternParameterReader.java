@@ -43,7 +43,7 @@ public final class PatternParameterReader implements ElementReader<PatternParame
 
         // parameter constraints
         for (Statement smt : resource.listProperties(RDFUNITv.parameterConstraint).toList()) {
-            parameterBuilder.setPatternParameterConstraints(smt.getObject().asResource().getURI());
+            parameterBuilder.setPatternParameterConstraints(smt.getObject().asResource().getURI()); // PatternParameterConstraints internally is String (enum)
         }
 
         //constraint pattern

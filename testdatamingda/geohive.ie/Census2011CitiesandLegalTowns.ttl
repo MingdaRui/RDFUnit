@@ -1,0 +1,592 @@
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC3537F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Trim Legal Town"@en , "Trim Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F874152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0037F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bray Legal Town"@en , "Bray Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D754152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1B37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Midleton Legal Town"@en , "Midleton Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FB54152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1437F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bandon Legal Town"@en , "Bandon Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FE94152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2F37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Longford Legal Town"@en , "Longford Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F4E4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC3437F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ballina Legal Town"@en , "Ballina Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F6C4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2037F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Letterkenny Legal Town"@en , "Letterkenny Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D734152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1A37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Kinsale Legal Town"@en , "Kinsale Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FEE4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE737F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Birr Legal Town"@en , "Birr Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C599A0004152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBED37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Wexford Legal Town"@en , "Wexford Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D6F4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE637F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Monaghan Legal Town"@en , "Monaghan Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D634152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBEC37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Clonmel Legal Town"@en , "Clonmel Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D614152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1737F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Cork City"@en , "Cork City" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D6D4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF137F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Tipperary Legal Town"@en , "Tipperary Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F674152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBEB37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Carrick-On-Suir Legal Town"@en , "Carrick-On-Suir Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D644152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0237F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Shannon Legal Town"@en , "Shannon Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D654152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1D37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Buncrana Legal Town"@en , "Buncrana Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FBA4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1637F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Dublin City"@en , "Dublin City" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FF14152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF037F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Sligo Legal Town"@en , "Sligo Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D694152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2237F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Loughrea Legal Town"@en , "Loughrea Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D9D4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0137F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Arklow Legal Town"@en , "Arklow Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D774152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1C37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Fermoy Legal Town"@en , "Fermoy Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FED4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE937F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Edenderry Legal Town"@en , "Edenderry Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F884152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2137F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Balbriggan Legal Town"@en , "Balbriggan Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FFA4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBEF37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Drogheda Legal Town"@en , "Drogheda Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D714152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE837F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Tullamore Legal Town"@en , "Tullamore Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F894152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBEE37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Kilkenny Legal Town"@en , "Kilkenny Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D5E4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1937F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Galway City"@en , "Galway City" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D6B4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF337F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Templemore Legal Town"@en , "Templemore Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FC44152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0437F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Muinebeag Legal Town"@en , "Muinebeag Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C599A06B4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1F37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ballyshannon Legal Town"@en , "Ballyshannon Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FB94152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1837F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Waterford City"@en , "Waterford City" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D594152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF237F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Nenagh Legal Town"@en , "Nenagh Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FC34152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2437F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ballinasloe Legal Town"@en , "Ballinasloe Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D9E4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0A37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Kilrush Legal Town"@en , "Kilrush Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FE74152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0337F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Navan (An Uaimh) Legal Town"@en , "Navan (An Uaimh) Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D744152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1E37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bundoran Legal Town"@en , "Bundoran Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FB84152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2A37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Droichead Nua Legal Town"@en , "Droichead Nua Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D794152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2337F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Tuam Legal Town"@en , "Tuam Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F6B4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF637F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Lismore Legal Town"@en , "Lismore Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F694152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0737F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Belturbet Legal Town"@en , "Belturbet Legal Town" .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE137F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ceanannas M贸r (Kells) Legal Tow"@en , "Ceanannas M贸r (Kells) Legal Tow" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F704152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF537F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Cashel Legal Town"@en , "Cashel Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FC64152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0637F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Cootehill Legal Town"@en , "Cootehill Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D584152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBFB37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "New Ross Legal Town"@en , "New Ross Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C599A0204152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF437F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Thurles Legal Town"@en , "Thurles Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FC54152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0537F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Carlow Legal Town"@en , "Carlow Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D784152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0C37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Youghal Legal Town"@en , "Youghal Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FCA4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2637F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Listowel Legal Town"@en , "Listowel Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FCC4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBFA37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Athlone Legal Town"@en , "Athlone Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D5F4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2C37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Mountmellick Legal Town"@en , "Mountmellick Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F4D4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1137F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Macroom Legal Town"@en , "Macroom Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FEF4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0B37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Kilkee Legal Town"@en , "Kilkee Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FE84152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2537F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Killarney Legal Town"@en , "Killarney Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FCB4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC3137F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Dundalk Legal Town"@en , "Dundalk Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D724152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1037F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Skibbereen Legal Town"@en , "Skibbereen Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FB64152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2B37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Naas Legal Town"@en , "Naas Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D5B4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF837F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Dungarvan Legal Town"@en , "Dungarvan Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F684152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0937F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ennis Legal Town"@en , "Ennis Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D5D4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC3037F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ardee Legal Town"@en , "Ardee Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F4F4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE337F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Castleblayney Legal Town"@en , "Castleblayney Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FBB4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF737F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Tramore Legal Town"@en , "Tramore Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F6A4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0837F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Cavan Legal Town"@en , "Cavan Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FB74152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE237F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ballybay Legal Town"@en , "Ballybay Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D844152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBFD37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Enniscorthy Legal Town"@en , "Enniscorthy Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F8A4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0E37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Passage West Legal Town"@en , "Passage West Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FEC4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2837F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Leixlip Legal Town"@en , "Leixlip Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D5A4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBFC37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Gorey Legal Town"@en , "Gorey Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FF84152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2E37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Granard Legal Town"@en , "Granard Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D894152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1337F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Mallow Legal Town"@en , "Mallow Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FB44152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0D37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Cobh Legal Town"@en , "Cobh Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FEB4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2737F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Tralee Legal Town"@en , "Tralee Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D6E4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC3337F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Westport Legal Town"@en , "Westport Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F6E4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1237F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Clonakilty Legal Town"@en , "Clonakilty Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999FEA4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2D37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Portlaoighise Legal Town"@en , "Portlaoighise Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D684152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC3237F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Castlebar Legal Town"@en , "Castlebar Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F6D4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE537F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Clones Legal Town"@en , "Clones Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999E734152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBF937F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Mullingar Legal Town"@en , "Mullingar Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D6A4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBE437F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Carrickmacross Legal Town"@en , "Carrickmacross Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D574152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBFF37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Greystones Legal Town"@en , "Greystones Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D704152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBEA37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Boyle Legal Town"@en , "Boyle Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F6F4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EBFE37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Wicklow Legal Town"@en , "Wicklow Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D764152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC1537F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Limerick City"@en , "Limerick City" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D6C4152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC0F37F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Bantry Legal Town"@en , "Bantry Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999D664152E0530100007F0280> .
+
+<http://data.geohive.ie/resource/census2011-cities-and-legal-towns/357655A9EC2937F3E0530100007FD1B3>
+        a       <http://ontologies.geohive.ie/osi#Census_2011_Cities_and_Legal_Town> , <http://www.opengis.net/ont/geosparql#Feature> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Athy Legal Town"@en , "Athy Legal Town" ;
+        <http://ontologies.geohive.ie/osi#partOf>
+                <http://data.geohive.ie/resource/census2011-settlements/3576C5999F854152E0530100007F0280> .

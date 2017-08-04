@@ -4,6 +4,8 @@ import org.aksw.jena_sparql_api.core.QueryExecutionFactory;
 import org.aksw.rdfunit.io.IOUtils;
 import org.aksw.rdfunit.services.PrefixNSService;
 import org.apache.jena.rdf.model.Model;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,6 +20,9 @@ import java.io.OutputStream;
  * @version $Id: $Id
  */
 public class RdfFileWriter implements RdfWriter {
+
+    /*MD*/   protected static final Logger LOGGER = LoggerFactory.getLogger(RdfFileWriter.class);
+
     private final String filename;
     private final String filetype;
     private final boolean skipIfExists;
@@ -75,6 +80,8 @@ public class RdfFileWriter implements RdfWriter {
     /** {@inheritDoc} */
     @Override
     public void write(QueryExecutionFactory qef) throws RdfWriterException {
+
+        /*MD*/  LOGGER.info( "write to: " + filename );
 
         File file = new File(filename);
         if (file.exists() && skipIfExists) {

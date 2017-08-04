@@ -1,0 +1,26 @@
+# https://www.w3.org/TR/vocab-dcat/#Class:_Catalog
+
+@prefix dcat: <http://www.3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################
+#### 4.3 Describing catalog records metadata
+#################################################
+
+# If the catalog pulisher decides to keep metadata describing its records (i.e. the records containing metadata describing the datasets),
+# dcat:CatalogRecord can be used. For example, while :dataset-001 was issued on 2011-12-05, its description on Imaginary Catalog was added on 2011-
+# 12-11. This can be represented by DCAT as in the following:
+:catalog dcat:record :record-001 .
+
+:record-001
+    a dcat:CatalogRecord ;
+    foaf:primaryTopic :dataset-001 ;
+    dct:issued "2011-12-11"^^xsd:date ;
+    .

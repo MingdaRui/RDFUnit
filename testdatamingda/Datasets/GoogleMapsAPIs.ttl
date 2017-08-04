@@ -1,0 +1,50 @@
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix prv:   <http://purl.org/net/provenance/ns#> .
+@prefix ir:    <http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix ls:    <http://linked-web-apis.fit.cvut.cz/resource/> .
+@prefix yago:  <http://localhost:8080/class/yago/> .
+@prefix lso:   <http://linked-web-apis.fit.cvut.cz/ns/core#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix geonames: <http://www.geonames.org/ontology#> .
+@prefix meta:  <http://example.org/metadata#> .
+@prefix units: <http://dbpedia.org/units/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prvTypes: <http://purl.org/net/provenance/types#> .
+@prefix p:     <http://localhost:8080/property/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+<http://linked-web-apis.fit.cvut.cz/resource/data/google-maps_api?output=ttl>
+        rdfs:label         "RDF description of Google Maps API" ;
+        foaf:primaryTopic  ls:google-maps_api .
+
+ls:google-maps_api  a             lso:WebAPI ;
+        rdfs:label                "Google Maps API" ;
+        lso:accountRequired       0 ;
+        lso:assignedCategory      ls:mapping_category ;
+        lso:assignedTag           ls:places_tag , ls:display_tag , ls:viewer_tag , ls:mapping_tag ;
+        lso:developerKeyRequired  1 ;
+        lso:rating                "4.1" ;
+        lso:readWithoutLogin      1 ;
+        lso:sslSupport            0 ;
+        lso:supportedDataFormat   ls:xml_format , ls:json_format , ls:kml_format , ls:vml_format ;
+        lso:supportedProtocol     ls:javascript_protocol ;
+        lso:usageFees             "None specified" ;
+        lso:usageLimits           "50,000 geocode requests per day" ;
+        dcterms:created           "2005-12-05"^^xsd:date ;
+        dcterms:creator           ls:google.com_provider ;
+        dcterms:description       "The Google Maps API allow for the embedding of Google Maps onto web pages of outside developers, using a simple JavaScript interface or a Flash interface. It is designed to work on both mobile devices as well as traditional desktop browser applications. The API includes language localization for over 50 languages, region localization and geocoding, and has mechanisms for enterprise developers who want to utilize the Google Maps API within an intranet. The API HTTP services can be accessed over a secure (HTTPS) connection by Google Maps API Premier customers." ;
+        dcterms:publisher         ls:google.com_provider ;
+        dcterms:title             "Google Maps API" ;
+        prov:generatedAtTime      "2005-12-05"^^xsd:date ;
+        prov:wasAttributedTo      ls:google.com_provider ;
+        prov:wasGeneratedBy       [ rdfs:seeAlso  <http://linked-web-apis.fit.cvut.cz/resource/values.data/prov:wasGeneratedBy/google-maps_api> ] ;
+        foaf:homepage             <http://www.programmableweb.com/api/google-maps> ;
+        foaf:isPrimaryTopicOf     <https://developers.google.com/maps/> .

@@ -2,11 +2,13 @@
 @prefix rut: <http://rdfunit.aksw.org/ns/core#> .
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
+# Total 31 Patterns
 
+# 1
 ##########################################
 #### rdfs:range pattern (exists but wrong)
 ##########################################
@@ -46,13 +48,14 @@ rutp:RDFSRANGE-T1 a rut:Parameter ;
     dcterms:identifier "T1" ;
     rut:parameterConstraint rut:Class .
 
+# 2
 ##########################################
 #### rdfs:range pattern (not defined in the dataset)
 ##########################################
 
 rutp:RDFSRANGE-MISS a rut:Pattern ;
     dcterms:identifier "RDFSRANGE-MISS" ;
-    dcterms:description """Emulates the rdfs:range constrain and checks if the range is not defined withing the dataset""" ;
+    dcterms:description """Emulates the rdfs:range constrain and checks if the range is not defined within the dataset""" ;
     rut:sparqlWherePattern """ {
                                     ?s %%P1%% ?this.
                                     FILTER EXISTS {
@@ -75,6 +78,7 @@ rutp:RDFSRANGE-MISS-P1 a rut:Parameter ;
     dcterms:identifier "P1" ;
     rut:parameterConstraint rut:Property .
 
+# 3
 ##########################################
 #### rdfs:range (datatype) pattern
 ##########################################
@@ -111,6 +115,7 @@ rutp:RDFSRANGED-D1 a rut:Parameter ;
     dcterms:identifier "D1" ;
     rut:parameterConstraint rut:None .
 
+# 4
 ##########################################
 #### rdfs:domain pattern (exists but wrong)
 ##########################################
@@ -149,6 +154,7 @@ rutp:RDFSDOMAIN-T1 a rut:Parameter ;
     dcterms:identifier "T1" ;
     rut:parameterConstraint rut:Class .
 
+# 5
 ##########################################
 #### rdfs:domain pattern (missing in the dataset)
 ##########################################
@@ -182,6 +188,7 @@ rutp:RDFSDOMAIN-MISS-V1 a rut:Parameter ;
 
 
 
+# 6
 ##########################################
 #### owl:disjointClass pattern  (#TODO fix transitive)
 ##########################################
@@ -221,6 +228,7 @@ rutp:OWLDISJC-T2 a rut:Parameter ;
     dcterms:identifier "T2" ;
     rut:parameterConstraint rut:Class .
 
+# 7
 ##########################################
 #### owl:propertyDisjointWith pattern
 ##########################################
@@ -255,6 +263,7 @@ rutp:OWLDISJP-P2 a rut:Parameter ;
     dcterms:identifier "P2" ;
     rut:parameterConstraint rut:Property .
 
+# 8
 ##########################################
 #### owl cardinality constrains pattern
 ##########################################
@@ -292,6 +301,7 @@ rutp:OWLCARD-V1 a rut:Parameter ;
     rut:parameterConstraint rut:None ;
     rut:constraintPattern """[0-9]*""" .
 
+# 9
 ##########################################
 #### owl cardinality constrains pattern on Class
 ##########################################
@@ -338,6 +348,7 @@ rutp:OWLCARDT-V1 a rut:Parameter ;
     rut:constraintPattern """[0-9]*""" .
 
 
+# 10
 ##########################################
 #### owl Qualified cardinality constrains pattern
 ##########################################
@@ -390,6 +401,7 @@ rutp:OWLQCARDT-T2 a rut:Parameter ;
     rut:parameterConstraint rut:Class .
 
 
+# 11
 ##########################################
 #### Type & Property dependency (equivalent to card > 0)
 ##########################################
@@ -431,6 +443,7 @@ rutp:TYPRODEP-P1 a rut:Parameter ;
     rut:parameterConstraint rut:Property .
 
 
+# 12
 ##########################################
 #### Type & Property/Type dependency (equivalent to Qualified Cardinality > 0)
 ##########################################
@@ -477,6 +490,7 @@ rutp:TYPROTYPEDEP-T2 a rut:Parameter ;
     dcterms:identifier "T2" ;
     rut:parameterConstraint rut:Class .
 
+# 13
 ################################################################################
 #### unique value constraint of inverse functional properties
 ################################################################################
@@ -508,6 +522,7 @@ rutp:INVFUNC-P1 a rut:Parameter ;
     dcterms:identifier "P1" ;
     rut:parameterConstraint rut:Property .
 
+# 14
 ################################################################################
 #### unique value constraint of inverse functional properties  (on a Class)
 ################################################################################
@@ -546,6 +561,7 @@ rutp:INVFUNCT-T1 a rut:Parameter ;
     dcterms:identifier "T1" ;
     rut:parameterConstraint rut:Class .
 
+# 15
 ################################################################################
 #### symmetric properties involved in only one axiom (only 'one-way'), e.g.
 #### ex:bernd dbo:spouse ex:alice . is mentioned, but not
@@ -578,6 +594,7 @@ rutp:OWLSYMMETRICPROP-P1 a rut:Parameter ;
     dcterms:identifier "P1" ;
     rut:parameterConstraint rut:Property .
 
+# 16
 ################################################################################
 #### a property that is asymmetric is used as symmetric property, as in
 #### ex:bernd dbo:child ex:alice . and
@@ -610,6 +627,7 @@ rutp:OWLASYMMETRICPROP-P1 a rut:Parameter ;
     dcterms:identifier "P1" ;
     rut:parameterConstraint rut:Property .
 
+# 17
 ################################################################################
 #### in a dataset a transitive property is used for statements like
 #### ex:alice dbo:family ex:bernd . and
@@ -645,6 +663,7 @@ rutp:OWLTRANSPROP-P1 a rut:Parameter ;
     dcterms:identifier "P1" ;
     rut:parameterConstraint rut:Property .
 
+# 18
 ################################################################################
 #### Given an irreflexive property p there should not be any triples like
 #### ex:sth p ex:sth . 
@@ -675,6 +694,7 @@ rutp:OWLIRREFLEXIVE-P1 a rut:Parameter ;
     dcterms:identifier "P1" ;
     rut:parameterConstraint rut:Property .
 
+# 19
 ################################################################################
 #### COMP
 #### Comparison between two literal values in a resource
@@ -720,6 +740,7 @@ rutp:COMP-OP a rut:Parameter ;
     rut:parameterConstraint rut:Operator ;
     rut:constraintPattern """<|<=|>|>=|=|!=""" .
 
+# 20
 ################################################################################
 #### MATCH
 #### Literal in not in a desired pattern
@@ -762,6 +783,7 @@ rutp:MATCH-REGEX a rut:Parameter ;
     dcterms:identifier "REGEX" ;
     rut:parameterConstraint rut:None .
 
+# 21
 ################################################################################
 #### LITRAN
 #### Literal in specific range
@@ -820,6 +842,7 @@ rutp:LITRAN-valueMax a rut:Parameter ;
     rut:parameterConstraint rut:None ;
     rut:constraintPattern """[0-9]*\\.[0-9]*""" .
 
+# 22
 ################################################################################
 #### TYPDEP
 #### Resource is of type A and not of type B
@@ -857,6 +880,7 @@ rutp:TYPDEP-T2 a rut:Parameter ;
     dcterms:identifier "T2" ;
     rut:parameterConstraint rut:Class .
 
+# 23
 ################################################################################
 #### PVT
 #### Resources with a propertyA having valueA should contain a triple with
@@ -894,6 +918,7 @@ rutp:PVT-P2 a rut:Parameter ;
     dcterms:identifier "P2" ;
     rut:parameterConstraint rut:Property .
 
+# 24
 ################################################################################
 #### TRIPLE
 #### Resource has ValueA for PropertyA
@@ -930,6 +955,7 @@ rutp:TRIPLE-V1 a rut:Parameter ;
     rut:parameterConstraint rut:None .
 
 
+# 25
 ################################################################################
 #### TRIPLEDR - TRIPLE with Domain & Range   (ATM used for Qualified CArdinality checks)
 #### Resource has P1  with domain & range for P1
@@ -967,6 +993,7 @@ rutp:TRIPLEDR-T2 a rut:Parameter ;
     dcterms:identifier "T2" ;
     rut:parameterConstraint rut:Class .
 
+# 26
 ################################################################################
 #### OBJFUNC
 #### The object of a triple satisfies a function
@@ -1010,6 +1037,7 @@ rutp:OBJFUNC-FUNC a rut:Parameter ;
     rut:parameterConstraint rut:None .
 
 
+# 27
 ###################################################################################
 #### OBJFUNCD
 #### The object of a triple satisfies a function but the resource has specific type
@@ -1060,6 +1088,7 @@ rutp:OBJFUNCD-FUNC a rut:Parameter ;
     rut:parameterConstraint rut:None .
 
 
+# 28
 ###################################################################################
 #### OBJVALIND
 #### The object of a triple had specific values and the resource has specific type
@@ -1109,6 +1138,7 @@ rutp:OBJVALIND-VALUES a rut:Parameter ;
     dcterms:identifier "VALUES" ;
     rut:parameterConstraint rut:None .
 
+# 29
 ################################################################################
 #### CHECKLANG
 #### Check the language of an object for a specific value
@@ -1153,6 +1183,7 @@ rutp:CHECKLANG-V1 a rut:Parameter ;
     rut:parameterConstraint rut:None .
 
 
+# 30
 ################################################################################
 #### ONELANG
 #### Resource has more than one plain literal of a certain language assigned
@@ -1197,6 +1228,7 @@ rutp:ONELANG-V1 a rut:Parameter ;
     rut:parameterConstraint rut:None .
 
 
+# 31
 ################################################################################
 #### ONELANGGLOBAL
 #### Resource has more than one plain literal of a certain language assigned
@@ -1237,3 +1269,36 @@ rutp:ONELANGGLOBAL-P1 a rut:Parameter ;
 
 
 
+################################################
+
+rutp:MINGDATEST a rut:Pattern ;
+    dcterms:identifier "MINGDATEST" ;
+    dcterms:description """Emulates the rdfs:range (datatype) constrain.""" ;
+    rut:sparqlWherePattern """ {
+                                    ?this %%P1%% ?c.
+                                    FILTER (str(?c) != '%%D1%%')
+                                } """ ;
+    rut:sparqlPrevalencePattern """ SELECT (count( DISTINCT ?this) AS ?total)
+                                     WHERE { ?this %%P1%% ?c .} """ ;
+    rut:parameter rutp:MINGDATEST-P1 ;
+    rut:parameter rutp:MINGDATEST-D1 ;
+    rut:resultAnnotation [
+        a rut:ResultAnnotation ;
+        rut:annotationProperty sh:predicate ;
+        rut:annotationValue """%%P1%%"""
+    ];
+    rut:resultAnnotation [
+        a rut:ResultAnnotation ;
+        rut:annotationProperty sh:object ;
+        rut:annotationValue """?c"""
+    ];
+    .
+
+
+rutp:MINGDATEST-P1 a rut:Parameter ;
+    dcterms:identifier "P1" ;
+    rut:parameterConstraint rut:Property .
+
+rutp:MINGDATEST-D1 a rut:Parameter ;
+    dcterms:identifier "D1" ;
+    rut:parameterConstraint rut:None .

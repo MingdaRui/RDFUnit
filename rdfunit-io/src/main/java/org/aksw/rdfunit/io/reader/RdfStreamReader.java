@@ -1,6 +1,8 @@
 package org.aksw.rdfunit.io.reader;
 
 import org.aksw.rdfunit.io.format.FormatService;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.jena.query.Dataset;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.riot.RDFDataMgr;
@@ -8,9 +10,7 @@ import org.apache.jena.riot.RDFLanguages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 
 /**
  * <p>RDFStreamReader class.</p>
@@ -24,6 +24,9 @@ public class RdfStreamReader implements RdfReader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RdfStreamReader.class);
 
+    /*MD*/ public static int count = 0;
+
+    /*MD*/ public static String RdfReaderName = "RdfStreamReader";
     private final InputStream inputStream;
     private final String format;
 
@@ -66,7 +69,28 @@ public class RdfStreamReader implements RdfReader {
     @Override
     public void read(Model model) throws RdfReaderException {
         try {
-            RDFDataMgr.read(model, inputStream, null, RDFLanguages.nameToLang(format));
+
+            /*MD*/ ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            /*MD*/ IOUtils.copy(inputStream, baos);
+            /*MD*/ byte[] bytes = baos.toByteArray();
+
+            /*MD*/ ByteArrayInputStream bais1 = new ByteArrayInputStream(bytes);
+
+            // Read and add triples from inputStream to the model.
+//            RDFDataMgr.read(model, inputStream, null, RDFLanguages.nameToLang(format));
+            /*MD*/ RDFDataMgr.read(model, bais1, null, RDFLanguages.nameToLang(format));
+            /*MD*/ LOGGER.info( "RdfStreamReader.read(Model)" );
+
+            /*MD*/ File directory = new File("/mnt/c/Users/Mingda Rui/Desktop/Semantic Web/LogFile/");
+            /*MD*/ if (!directory.exists()) {
+            /*MD*/     directory = new File("c:/Users/Mingda Rui/Desktop/Semantic Web/LogFile/");
+            /*MD*/ }
+            /*MD*/ File file = new File( directory + "/RdfStreamReaderOutput.txt" );
+            /*MD*/ PrintWriter out = new PrintWriter(new FileOutputStream(file, true));
+            /*MD*/ out.println("No." + ++count + ": ");
+            /*MD*/ out.flush();
+            /*MD*/ IOUtils.copy(new ByteArrayInputStream(bytes), new FileOutputStream(file, true));
+
         } catch (Exception e) {
             throw new RdfReaderException(e.getMessage(), e);
         }
@@ -103,5 +127,11 @@ public class RdfStreamReader implements RdfReader {
                 "inputStream=" + inputStream +
                 ", format=" + format +
                 '}';
+    }
+
+    /*MD*/
+    @Override
+    public String getRdfReaderName() {
+        return RdfReaderName;
     }
 }

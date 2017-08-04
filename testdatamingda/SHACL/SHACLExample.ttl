@@ -1,0 +1,20 @@
+@prefix rutp: <http://rdfunit.aksw.org/data/patterns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.com> .
+
+
+ex:Person
+    a rdfs:Class, sh:NodeShape ;
+    rdfs:label "Person" ;
+    rdfs:subClasOf rdfs:Resource ;
+    sh:property [
+        sh:path ex:lastName ;
+        sh:name "last name" ;
+        sh:description "A Person's last name (aka family name)."
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+        sh:minCount 1 ;
+    ] ;
+.

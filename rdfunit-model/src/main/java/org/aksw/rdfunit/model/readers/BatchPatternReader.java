@@ -37,6 +37,9 @@ public final class BatchPatternReader {
     public Collection<Pattern> getPatternsFromModel(Model model) {
         return getPatternsFromResourceList(
                 model.listResourcesWithProperty(RDF.type, RDFUNITv.Pattern).toList()
+                // ResIterator Model.listResourcesWithProperty(Property p, RDFNode o)
+                // Answer an iterator [with no duplicates] over all the resources in this model that have property p with value o.
+                // iterator.toList() returns a List.
         );
     }
 
@@ -47,9 +50,16 @@ public final class BatchPatternReader {
      * @return a {@link java.util.Collection} object.
      */
     public Collection<Pattern> getPatternsFromResourceList(List<Resource> resources) {
-        return resources.stream()
+        return resources.stream() //This resources is all the "Pattern" in the model
                 .map(resource -> PatternReader.create().read(resource))
                 .collect(Collectors.toList());
+        // 1. Java 8 new feature
+        //    x.stream().map(y -> y.foo()).collect(Collectors.toList()); x is a list, convert every element in the x from y to y.foo().
+        //    x is the original list, y is one of elements in x, y.foo() is one of elements in the new list. This operation return ths new list.
+        // 2. PatternReader.create() returns a new PatternReader();
+        //    PatternReader.read(resource) read information about pattern from resource, store those information in a Pattern object, and return the Pattern object.
+        // 3. Finally, replace the original List<Resource> with Collection<Pattern>.
+        //    To sum up, this method takes pattern resources and covert them to Pattern Object (actually it is PatternImpl)
 
     }
 }

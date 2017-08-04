@@ -24,6 +24,8 @@ public final class PrefixNSService {
      * Dual map that maps prefixes to namespaces (lazy init)
      */
     private static final class MapInstance {
+
+        // createPrefixNsDidiMap() read turtle of namespace & prefix and put them into a BiMap, and the return the BiMap.
         private static final BiMap<String, String> prefixNsBidiMap = createPrefixNsBidiMap();
 
         private MapInstance(){}
@@ -33,7 +35,7 @@ public final class PrefixNSService {
             BiMap<String, String> dualMap = HashBiMap.create();
             Model prefixModel = ModelFactory.createDefaultModel();
 
-            try (InputStream is = PrefixNSService.class.getResourceAsStream(Resources.PREFIXES)) {
+            try (InputStream is = PrefixNSService.class.getResourceAsStream(Resources.PREFIXES)) { //Resources.PREFIXES is the location of prefixes.ttl
                 prefixModel.read(is, null, "TURTLE");
             } catch (IOException e) {
                 throw new IllegalArgumentException("Cannot read prefixes.ttl from resources", e);
@@ -94,6 +96,8 @@ public final class PrefixNSService {
      * @param model the model we want to initialize
      */
     public static void setNSPrefixesInModel(Model model) {
+
+        // getPrefixMap() return a unmodifiable BiMap, which contains the Namespace & Prefix map from prefix.ttl
         model.setNsPrefixes(getPrefixMap());
     }
 

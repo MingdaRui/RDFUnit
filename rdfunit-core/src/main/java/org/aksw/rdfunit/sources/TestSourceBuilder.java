@@ -7,6 +7,8 @@ import org.aksw.rdfunit.io.format.SerializationFormatGraphType;
 import org.aksw.rdfunit.io.reader.RdfReader;
 import org.aksw.rdfunit.io.reader.RdfReaderFactory;
 import org.aksw.rdfunit.io.reader.RdfStreamReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedInputStream;
 import java.util.Collection;
@@ -22,6 +24,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * @version $Id: $Id
  */
 public class TestSourceBuilder {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(TestSourceBuilder.class);
 
     private enum TestSourceType {Endpoint, InMemSingle, InMemDataset}
     private TestSourceType testSourceType = TestSourceType.InMemSingle;
@@ -42,7 +46,9 @@ public class TestSourceBuilder {
      * @return a {@link org.aksw.rdfunit.sources.TestSourceBuilder} object.
      */
     public TestSourceBuilder setPrefixUri(String prefix, String uri) {
-        this.sourceConfig = new SourceConfig(prefix, uri);
+        this.sourceConfig = new SourceConfig(prefix, uri); // new SourceConfig(RDFUnitConfiguration.prefix, RDFUnitConfiguration.datasetURI);
+                                                           // new SourceConfig(SchemaService.schemata.prefix, SchemaService.schemata.namespace);
+
         return this;
     }
 
@@ -60,7 +66,7 @@ public class TestSourceBuilder {
         if (queryingConfig == null) {
             queryingConfig = QueryingConfig.createEndpoint();
         }
-        return  this;
+        return this;
     }
 
     /**
@@ -69,9 +75,13 @@ public class TestSourceBuilder {
      * @return a {@link org.aksw.rdfunit.sources.TestSourceBuilder} object.
      */
     public TestSourceBuilder setImMemSingle() {
-        testSourceType = TestSourceType.InMemSingle;
+        testSourceType = TestSourceType.InMemSingle; // enum TestSourceType {Endpoint, InMemSingle, InMemDataset}, InMenSingle is the default.
         if (queryingConfig == null) {
             queryingConfig = QueryingConfig.createInMemory();
+            // QueryingConfig is a class to store query parameters, e.g. cache, delay etc.
+            // QueryingConfig has a lot of static variables and functions.
+            // For QueryingConfig.createInMemory(), it initializes new QueryingConfig(cacheTTL(cache time to live) 0, queryDelay 0, queryLimit 0, pagination 0);
+
         }
         return this;
     }
@@ -90,19 +100,29 @@ public class TestSourceBuilder {
     }
 
     /**
+     *
      * <p>setImMemFromUri.</p>
      *
      * @param uri a {@link java.lang.String} object.
      * @return a {@link org.aksw.rdfunit.sources.TestSourceBuilder} object.
      */
-    public TestSourceBuilder setImMemFromUri(String uri) {
+    public TestSourceBuilder setImMemFromUri(String uri) { // uri is -u parameter
         SerializationFormat format = FormatService.getInputFormat(FormatService.getFormatFromExtension(uri));
-        if (format != null && format.getGraphType().equals(SerializationFormatGraphType.dataset)) {
+        // 1. FormatService.getFormatFromExtension returns file format in String, default is "TURTLE"
+        // 2. FormatService.getInputFormat(String format) returns a SerializationFormat for that format
+
+        if (format != null && format.getGraphType().equals(SerializationFormatGraphType.dataset)) { // enum SerializationFormatGraphType { singleGraph, dataset }
             setImMemDataset();
         } else {
             setImMemSingle();
+            // This method assign TestSourceType to InMeDataset
+            // then kind of init a QueryingConfig by QueryingConfig.createInMemory(), (cacheTTL(cache time to live) 0, queryDelay 0, queryLimit 0, pagination 0)
+
         }
         this.inMemReader = RdfReaderFactory.createDereferenceReader(uri);
+        // First, create readers according to uri.
+        // this.inMemReader = return new RdfFirstSuccessReader(readers);
+
         return this;
     }
 
@@ -231,6 +251,9 @@ public class TestSourceBuilder {
         checkNotNull(referenceSchemata, "Referenced schemata not set in TestSourceBuilder");
 
         if (testSourceType.equals(TestSourceType.Endpoint)) {
+
+            LOGGER.info("Entery TestSourceBuilder.build() -> TestSourceType.Endpoint");
+
             if (queryingConfig == null) {
                 queryingConfig = QueryingConfig.createEndpoint();
             }
@@ -246,9 +269,13 @@ public class TestSourceBuilder {
         checkNotNull(inMemReader);
 
         if (testSourceType.equals(TestSourceType.InMemSingle)) {
+            LOGGER.info("TestSourceBuilder.java - build() - testSourceType.equals(TestSourceType.InMemSingle)");
+//            System.out.println("TestSourceBuilder.java - build() - testSourceType.equals(TestSourceType.InMenSingle)");
             return new DumpTestSource(sourceConfig, queryingConfig, referenceSchemata, inMemReader);
         }
         if (testSourceType.equals(TestSourceType.InMemDataset)) {
+            LOGGER.info("TestSourceBuilder.java - build() - testSourceType.equals(TestSourceType.InMemDataset)");
+//            System.out.println("TestSourceBuilder.java - build() - testSourceType.equals(TestSourceType.InMemDataset)");
             return new DatasetTestSource(sourceConfig, queryingConfig, referenceSchemata, inMemReader);
         }
 

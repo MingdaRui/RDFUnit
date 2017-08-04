@@ -1,0 +1,46 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dataid: <http://dataid.dbpedia.org/ns/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dmp: <http://dataid.dbpedia.org/ns/dmp#> .
+
+<http://aligned-project.eu/data/slo_dataid.ttl>
+ a void:DatasetDescription;
+ foaf:primaryTopic <http://aligned-project.eu/data/slo_dataid.ttl#dataset> .
+
+<http://aligned-project.eu/data/slo_dataid.ttl#dataset>
+ a dataid:Dataset ;
+ dc:title "Software Lifecycle Ontology dataset" ;
+ rdfs:label "SLO" ;
+ dcat:landingPage <http://purl.org/slo/> ;
+ dataid:associatedAgent <http://aligned-project.eu/partner/oxse>, <http://aligned-project.eu/member/msolaniki> ;
+ dc:license <http://purl.org/NET/rdflicense/cc-by-sa3.0> ;
+ dataid:licenseName "CC-BY-SA 3.0" ;
+ dc:modified "06-07-2015" ;
+ dc:description "The purpose of the Software Lifecycle Ontology is to provide a top level ontology for describing a process in the lifecycle of an Software. The ontology conforms to the ISO/IEC 12207 standard for Systems and software engineering â€” Software life cycle processes.The terminology used in the ontology conforms to ISO/IEC TR 24774:2010(E). All subprocesses will require to import this module." ;
+ dmp:usefulness "The Software Lifecycle Ontology is a useful resource for software engineers to describe their processes and subprocesses." ;
+ dmp:similarData "No known similar datasets found so far." ;
+ dmp:reuseAndIntegration "SLO data can be integrated into other datasets and reused for data enrichment or mashup purposes." ;
+ dmp:additionalSoftware "SLO needs no additional software to be used. Complementary visualisations and tools will be provided in the scope of the project." ;
+ dmp:archiveLink "Oxford internal repositories." ;
+ dmp:preservation "Preservation of the data set is guaranteed by archival on a dedicated archive server." ;
+ dmp:openness "SLO is open and free for use." ;
+ dmp:repositoryUrl "https://github.com/aligned-h2020/ALIGNED_Ontologies" ;
+ dmp:growth "The SLO will be revised in M11 and M24 of the ALIGNED project." .
+
+<http://aligned-project.eu/partner/oxse>
+ rdf:type dataid:Publisher ;
+ dataid:agentName "University of Oxford Software Engineering" ;
+ dataid:agentMail "Monika.Solanki@cs.ox.ac.uk" .
+
+<http://aligned-project.eu/member/msolaniki>
+ rdf:type dataid:Maintainer ;
+ dataid:agentName "Monika Solaniki" ;
+ dataid:agentMail "Monika.Solanki@cs.ox.ac.uk" .

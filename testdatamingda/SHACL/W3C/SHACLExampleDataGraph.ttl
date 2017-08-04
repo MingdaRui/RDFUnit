@@ -1,0 +1,16 @@
+@prefix mingda: <file:///mnt/c/RDFUnit/testdatamingda/SHACL/W3C/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mingda:Alice
+    a mingda:Person ;
+    mingda:ssn "987-65-432A" .
+
+# mingda:Bob
+#     a mingda:Person ;
+#     mingda:ssn "123-45-6789" ;
+#     mingda:ssn "124-35-6789" .
+
+# mingda:Calvin
+#     a mingda:Person ;
+#     mingda:birthDate "1971-07-07"^^xsd:date ;
+#     mingda:worksFor mingda:UntypedCompany .

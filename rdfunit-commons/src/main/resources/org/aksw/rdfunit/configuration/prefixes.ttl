@@ -19,6 +19,8 @@
 @prefix ruts: <http://rdfunit.aksw.org/data/testsuite#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix mingda: </mnt/c/RDFUnit/testdatamingda/SHACL/W3C/> .
+# @prefix plants: </mnt/c/RDFUnit/testdatamingda/OWL/> .
 
 
 

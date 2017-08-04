@@ -13,6 +13,8 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.apache.jena.assembler.JA.getSchema;
+
 /**
  * <p>SchemaSource class.</p>
  *
@@ -27,7 +29,7 @@ public class SchemaSource implements Source {
     protected static final Logger LOGGER = LoggerFactory.getLogger(SchemaSource.class);
 
 
-    protected final SourceConfig sourceConfig;
+    protected final SourceConfig sourceConfig; // contains a prefix and a uri(namespace)
     @Getter private final String schema;
 
     protected final RdfReader schemaReader;
@@ -70,9 +72,24 @@ public class SchemaSource implements Source {
      * lazy loaded via lombok
      */
     private Model initModel() {
+
+        /*MD*/  LOGGER.info( "Entry SchemaSource.initModel()" );
+
         OntModel m = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM, ModelFactory.createDefaultModel());
+        // static OntModel createOntologyModel(OntModelSpec spec, Model base)
+        // Answer a new ontology model, constructed according to the given ontology model specification,
+        // and starting with the ontology data in the given model.
+
+        /*MD*/  LOGGER.info( "Create OntMdoel m" );
+
         try {
+
+            /*MD*/  LOGGER.info( "Goes into try{}" );
+
             schemaReader.read(m);
+
+            /*MD*/  LOGGER.info( "Entry SchemaSource.initModel() - Finish schemaReader.read(m);" );
+
         } catch (RdfReaderException e) {
             LOGGER.error("Cannot load ontology: {} ", getSchema(), e);
         }

@@ -1,0 +1,71 @@
+@prefix rutp: <http://rdfunit.aksw.org/data/patterns#> .
+@prefix rut: <http://rdfunit.aksw.org/ns/core#> .
+@prefix rutg: <http://rdfunit.aksw.org/data/generators#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdqv: <http://rdfunit.askw.org/ns/rdqv#> .
+
+
+rutg:MINGDASHHSAVALUE a rut:TestGenerator ;
+    dcterms:description """First prototype to support SHACL test case auto generation for hasValue testing""" ;
+    # rut:sparqlGenerator """ select distinct ?P1 ?D1 ?DESCRIPTION where {
+    #                             {   # xsd datatypes
+    #                                 ?P1 rdfs:range ?D1
+    #                                 FILTER ( STRSTARTS(str(?D1), 'http://www.w3.org/2001XMLSchema#') ).   
+    #                             } UNION {
+    #                                 ?P1 rdfs:range ?D1 .
+    #                                 ?D1 rdf:type/rdfs:subClassOf* rdfs:Datatype .
+    #                             } UNION {
+    #                                 ?P1 rdfs:range ?D1 .
+    #                                 ?P1 rdf:type/rdfssubClassOf* owl:DatatypeProperty .
+    #                             }
+    #                             FILTER ( ?D1 NOT IN ( rdfs:Literal, xsd:string, schema:Text, schema:URL, <http://ogp.me/ns/class#string>, <http://ogp.me/ns/class#url>) )
+    #                             FILTER (!isBlank(?P1))
+    #                             FILTER (!isBlank(?D1))
+    #                             BIND (concat(str(?P1),' does not have datatype: ', str(?D1)) AS ?DESCRIPTION)} """ ;
+    
+    # rut:sparqlGenerator """ select distinct ?P1 ('?v1' as ?V1) ?T1 ?DESCRIPTION where {
+    #                          ?P1 rdfs:domain ?T1 .
+    #                          BIND (concat(str(?P1),' has rdfs:domain different from: ', str(?T1)) AS ?DESCRIPTION)
+    #                          FILTER (!isBlank(?T1))
+    #                          FILTER ( ?T1 NOT IN ( owl:Thing , prov:Entity , rdfs:Resource, rdf:Property, rdfs:Class, rdfs:Datatype ))
+    #                          FILTER ( ?P1 NOT IN ( <http://www.w3.org/ns/rdfa#uri> , <http://www.w3.org/ns/rdfa#term> ))} """ ;
+    
+    # rut:sparqlGenerator """ select distinct ('mingda:ssn' as ?P1) ('987-65-432A' as ?D1) ?DESCRIPTION where {
+    #                             ?s ?x ?o
+    #                             BIND (concat(Str(?P1), ' does not have value: ', str(?D1)) AS ?DESCRIPTION)} """ ;
+    
+    rut:sparqlGenerator """ select distinct ?P1 ?D1 ?DESCRIPTION where {
+                                ?o sh:predicate ?P1 ;
+                                    sh:datatype xsd:string ;
+                                    sh:hasValue ?D1 .
+                                BIND (concat(Str(?P1), ' does not have value: ', Str(?D1)) AS ?DESCRIPTION)} """ ;
+    
+    rut:basedOnPattern rutp:MINGDATEST ;
+    rut:resultAnnotation [
+        a rut:ResultAnnotation ;
+        rut:annotationProperty rlog:level ;
+        rut:annotationValue rlog:ERROR] ;
+    rut:resultAnnotation [
+        a rut:ResultAnnotation ;
+        rut:annotationProperty sh:sourceConstraint ;
+        rut:annotationValue rdqv:RangeClassConstraint] ;
+
+
+### rut:resultAnnotation [
+###     a rut:ResultAnnotation ;
+###     rut:annotationProperty sh:sourceConstraint ;
+###     rut:annotationValue rdqv:RangeClassConstraint
+###                         rdqv:RangeDatatypeConstraint
+###                         rdqv:DomainCOnstraint
+###                         rdqv:TypeDisjointConstraint
+###                         rdqv:PropertyDisjointConstraint
+###                         rdqv:ComplementOfConstraint
+###                         rdqv:CardinalityConstraint
+###                         rdqv:InverseFunctionalPropertyConstraint
+###                         rdqv:AsymmetricPropertyConstraint
+###                         rdqv:IrreflexivePropertyConstraint
+###                         rdqv:DeprecatedPropertyConstraint] ;

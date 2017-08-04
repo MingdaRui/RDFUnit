@@ -26,6 +26,9 @@ public final class FormatService {
      * keeps all the available formats we define (lazy init)
      */
     private static final class Instance {
+
+        // Returns a list with all the defined serialization formats
+        // Include: html, junitxml, TURTLE, N3, N-TRIPLE, JSON-LD, RDF/JSON, RDF/XML-ABBREV, RDF/XML, RDFA, NQuads, Trix, TriG
         private static final Collection<SerializationFormat> serializationFormats = SerialiazationFormatFactory.getAllFormats();
         private Instance() {}
     }
@@ -37,7 +40,7 @@ public final class FormatService {
      * @return a FormatType that corresponds to the format name or null otherwise
      */
     public static SerializationFormat getInputFormat(String name) {
-        for (SerializationFormat ft : Instance.serializationFormats) {
+        for (SerializationFormat ft : Instance.serializationFormats) { // Instance.serializationFormats is a Collection<SerializationFormat> which stores all format information
             if (ft.isAcceptedAsInput(name)) {
                 return ft;
             }

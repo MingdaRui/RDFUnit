@@ -1,0 +1,223 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a> a dcat:Dataset ;
+    dct:description "A lodcloud diagram, automatically. Based on quality standards." ;
+    dct:identifier "e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a" ;
+    dct:issued "2014-02-19T21:10:40.694250"^^xsd:dateTime ;
+    dct:modified "2015-10-23T17:35:34.669579"^^xsd:dateTime ;
+    dct:publisher <https://datahub.io/organization/d0821303-befa-4808-a00f-4e1e073df26f> ;
+    dct:title "The Living LOD Cloud" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "Timothy Lebo" ;
+            vcard:hasEmail "lebot@rpi.edu" ] ;
+    dcat:distribution <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/10e3a6ce-661e-4082-b8f1-88373c5900c5>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/19e1c790-f034-4cb7-a4d8-7568e769dad2>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/26528846-e231-495d-aa0b-27fdbfe6b8ef>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/28951d8e-f80c-4d4a-97f9-407f79fd706e>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/317738c4-ccd0-4dbd-ab7a-18ebbb6b2954>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/37970545-56d1-4792-ae93-02f89ca2eb3a>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/4981bd31-2494-4f61-a40c-b5e0864e38f6>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/4e8cb063-5f6d-4cc2-9625-d777e8f05df5>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/5042a6a4-5c79-4fb2-9c1f-57deb8e13fda>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/52ddf43e-aad0-44fd-9d1a-7ae01461bd16>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/533f24a8-e1b3-4ac6-bea8-5c7b10b51ba6>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/64722b53-40c7-49ca-a484-021b4962b5c5>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/81d1a35b-b9f7-4c2d-9371-25a79d7debf1>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/82f803f4-0af7-4eab-a2f0-97d4bbd83cbf>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/851de705-01c2-4a51-81e6-51ef02b2d287>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/86bd764b-985c-46f5-89a9-07057364316c>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/880a930b-c617-4b21-872c-c5bf960ad31c>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/8af58a25-ff17-4992-96f0-f605b02ad1f6>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/8b6e8652-9fe6-464f-956d-d26c03adb5d9>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/8e6eddbb-00bc-4f33-b109-477a9e67989a>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/97749cfb-0f76-4d4f-a4ac-2fc90d9cb258>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/a8bf80af-137f-4c28-9682-49ca65e3d5d4>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/ad2268e5-8052-4180-b0e2-32c81bf6c19b>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/b19dacd0-e561-4f18-98be-74ae8330b9d3>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/b9ad68f8-87b9-4493-bdec-8a30b4bd2f3f>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/dd17ed67-8849-469d-bb6e-0662549a4df3>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/ef0de749-d82a-4f32-9e86-0224dea2b7f5>,
+        <https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/f47e1dd2-bde3-406b-80f8-214acc73b27b> ;
+    dcat:keyword "datafaqs",
+        "format-con",
+        "format-conv",
+        "format-datafaqs",
+        "format-dc",
+        "format-dcat",
+        "format-doap",
+        "format-foaf",
+        "format-irw",
+        "format-oboro",
+        "format-opm",
+        "format-ov",
+        "format-owl",
+        "format-pml",
+        "format-pmlj",
+        "format-pmlp",
+        "format-prov",
+        "format-rdf",
+        "format-rdfs",
+        "format-sd",
+        "format-sio",
+        "format-sioc",
+        "format-skos",
+        "format-vann",
+        "format-void",
+        "linked data" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/10e3a6ce-661e-4082-b8f1-88373c5900c5> a dcat:Distribution ;
+    dct:title "owl RDF Schema" ;
+    dcat:accessURL <http://www.w3.org/2002/07/owl> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/19e1c790-f034-4cb7-a4d8-7568e769dad2> a dcat:Distribution ;
+    dct:title "rdf RDF Schema" ;
+    dcat:accessURL <http://www.w3.org/1999/02/22-rdf-syntax-ns> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/26528846-e231-495d-aa0b-27fdbfe6b8ef> a dcat:Distribution ;
+    dct:title "void RDF Schema" ;
+    dcat:accessURL <http://rdfs.org/ns/void> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/28951d8e-f80c-4d4a-97f9-407f79fd706e> a dcat:Distribution ;
+    dct:title "pml RDF Schema" ;
+    dcat:accessURL <http://provenanceweb.org/ns/pml> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/317738c4-ccd0-4dbd-ab7a-18ebbb6b2954> a dcat:Distribution ;
+    dct:title "sio RDF Schema" ;
+    dcat:accessURL <http://semanticscience.org/resource/> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/37970545-56d1-4792-ae93-02f89ca2eb3a> a dcat:Distribution ;
+    dct:title "skos RDF Schema" ;
+    dcat:accessURL <http://www.w3.org/2004/02/skos/core> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/4981bd31-2494-4f61-a40c-b5e0864e38f6> a dcat:Distribution ;
+    dct:title "opm RDF Schema" ;
+    dcat:accessURL <http://openprovenance.org/ontology> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/4e8cb063-5f6d-4cc2-9625-d777e8f05df5> a dcat:Distribution ;
+    dct:title "sd RDF Schema" ;
+    dcat:accessURL <http://www.w3.org/ns/sparql-service-description> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/5042a6a4-5c79-4fb2-9c1f-57deb8e13fda> a dcat:Distribution ;
+    dct:title "sioc RDF Schema" ;
+    dcat:accessURL <http://rdfs.org/sioc/ns> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/52ddf43e-aad0-44fd-9d1a-7ae01461bd16> a dcat:Distribution ;
+    dct:format "HTML" ;
+    dct:title "Web site" ;
+    dcat:accessURL <http://purl.org/twc/lodcloud> .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/533f24a8-e1b3-4ac6-bea8-5c7b10b51ba6> a dcat:Distribution ;
+    dct:title "doap RDF Schema" ;
+    dcat:accessURL <http://usefulinc.com/ns/doap> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/64722b53-40c7-49ca-a484-021b4962b5c5> a dcat:Distribution ;
+    dct:title "foaf RDF Schema" ;
+    dcat:accessURL foaf: ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/81d1a35b-b9f7-4c2d-9371-25a79d7debf1> a dcat:Distribution ;
+    dct:title "datafaqs RDF Schema" ;
+    dcat:accessURL <http://purl.org/twc/vocab/datafaqs> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/82f803f4-0af7-4eab-a2f0-97d4bbd83cbf> a dcat:Distribution ;
+    dct:title "dcat RDF Schema" ;
+    dcat:accessURL <http://www.w3.org/ns/dcat> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/851de705-01c2-4a51-81e6-51ef02b2d287> a dcat:Distribution ;
+    dct:format "HTML" ;
+    dct:title "GitHub Repository" ;
+    dcat:accessURL <https://github.com/timrdf/lodcloud> .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/86bd764b-985c-46f5-89a9-07057364316c> a dcat:Distribution ;
+    dct:title "dc RDF Schema" ;
+    dcat:accessURL dct: ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/880a930b-c617-4b21-872c-c5bf960ad31c> a dcat:Distribution ;
+    dct:title "con RDF Schema" ;
+    dcat:accessURL <http://www.w3.org/2000/10/swap/pim/contact> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/8af58a25-ff17-4992-96f0-f605b02ad1f6> a dcat:Distribution ;
+    dct:title "rdfs RDF Schema" ;
+    dcat:accessURL <http://www.w3.org/2000/01/rdf-schema> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/8b6e8652-9fe6-464f-956d-d26c03adb5d9> a dcat:Distribution ;
+    dct:title "vann RDF Schema" ;
+    dcat:accessURL <http://purl.org/vocab/vann/> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/8e6eddbb-00bc-4f33-b109-477a9e67989a> a dcat:Distribution ;
+    dct:title "irw RDF Schema" ;
+    dcat:accessURL <http://www.ontologydesignpatterns.org/ont/web/irw.owl> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/97749cfb-0f76-4d4f-a4ac-2fc90d9cb258> a dcat:Distribution ;
+    dct:title "pmlj RDF Schema" ;
+    dcat:accessURL <http://inference-web.org/2.0/pml-justification.owl> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/a8bf80af-137f-4c28-9682-49ca65e3d5d4> a dcat:Distribution ;
+    dct:title "prov RDF Schema" ;
+    dcat:accessURL <http://purl.org/net/provenance/ns> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/ad2268e5-8052-4180-b0e2-32c81bf6c19b> a dcat:Distribution ;
+    dct:title "ov RDF Schema" ;
+    dcat:accessURL <http://open.vocab.org/terms/> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/b19dacd0-e561-4f18-98be-74ae8330b9d3> a dcat:Distribution ;
+    dct:title "prov RDF Schema" ;
+    dcat:accessURL <http://www.w3.org/ns/prov> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/b9ad68f8-87b9-4493-bdec-8a30b4bd2f3f> a dcat:Distribution ;
+    dct:title "pmlp RDF Schema" ;
+    dcat:accessURL <http://inference-web.org/2.0/pml-provenance.owl> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/dd17ed67-8849-469d-bb6e-0662549a4df3> a dcat:Distribution ;
+    dct:title "conv RDF Schema" ;
+    dcat:accessURL <http://purl.org/twc/vocab/conversion/> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/ef0de749-d82a-4f32-9e86-0224dea2b7f5> a dcat:Distribution ;
+    dct:title "oboro RDF Schema" ;
+    dcat:accessURL <http://obofoundry.org/ro/ro.owl> ;
+    dcat:mediaType "meta/rdf-schema" .
+
+<https://datahub.io/dataset/e82dc861-c3f4-4ef0-a46b-bd08a86b8b0a/resource/f47e1dd2-bde3-406b-80f8-214acc73b27b> a dcat:Distribution ;
+    dct:title "N-Triples Download" ;
+    dcat:accessURL <http://purl.org/twc/lodcloud/source/tw-rpi-edu/file/cr-full-dump/version/latest/conversion/purl-org-twc-lodcloud.nt.gz> ;
+    dcat:mediaType "application/x-ntriples" .
+
+<https://datahub.io/organization/d0821303-befa-4808-a00f-4e1e073df26f> a foaf:Organization ;
+    foaf:name "Tetherless World Constellation" .

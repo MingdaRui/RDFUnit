@@ -60,6 +60,7 @@ public final class ResultAnnotationReader implements ElementReader<ResultAnnotat
         // get predicate
         int count = 0;
         for (Statement smt : resource.listProperties(propertyP).toList()) {
+
             checkArgument(++count == 1, "Cannot have more than one property in ResultAnnotation %s with value %s", resource.getURI(), smt.getObject().toString());
             resultAnBuilder = new ResultAnnotationImpl.Builder(smt.getSubject(), ResourceFactory.createProperty(smt.getObject().asResource().getURI()));
         }

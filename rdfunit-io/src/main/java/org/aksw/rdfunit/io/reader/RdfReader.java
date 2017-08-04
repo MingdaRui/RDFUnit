@@ -14,6 +14,8 @@ import org.apache.jena.rdf.model.ModelFactory;
  */
 public interface RdfReader {
 
+//    /*MD*/  String RdfReaderName = null;
+
     /**
      * Reads RDF and returns a {@code Model}
      *
@@ -61,4 +63,8 @@ public interface RdfReader {
      * @throws RdfReaderException if any.
      */
     void readDataset(Dataset dataset) throws RdfReaderException;
+
+    /*MD*/  default String getRdfReaderName() {
+        return null;
+    }
 }

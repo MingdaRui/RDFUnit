@@ -1,0 +1,46 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dataid: <http://dataid.dbpedia.org/ns/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dmp: <http://dataid.dbpedia.org/ns/dmp#> .
+
+<http://aligned-project.eu/data/dio_dataid.ttl>
+ a void:DatasetDescription;
+ foaf:primaryTopic <http://aligned-project.eu/data/dio_dataid.ttl#dataset> .
+
+<http://aligned-project.eu/data/dio_dataid.ttl#dataset>
+ a dataid:Dataset ;
+ dc:title "Design Intent Ontology dataset" ;
+ rdfs:label "DIO" ;
+ dcat:landingPage <http://purl.org/dio/> ;
+ dataid:associatedAgent <http://aligned-project.eu/partner/oxse>, <http://aligned-project.eu/member/msolaniki> ;
+ dc:license <http://purl.org/NET/rdflicense/cc-by-sa3.0> ;
+ dataid:licenseName "CC-BY-SA 3.0" ;
+ dc:modified "06-07-2015" ;
+ dc:description "The purpose of the DIO ontology is to model the design intent or design rationale while undertaking the design of any artifact. A design intent or design rationale is an explicit documentation of the reasons behind decisions made when designing a system or artifact." ;
+ dmp:usefulness "DIO is a useful resource for implementing tools that assist in the collaborative design of artifacts." ;
+ dmp:similarData "No known similar datasets found so far." ;
+ dmp:reuseAndIntegration "DIO data can be integrated into other datasets and reused for data enrichment or mashup purposes." ;
+ dmp:additionalSoftware "DIO needs no additional software to be used. Complementary visualisations and tools will be provided in the scope of the project." ;
+ dmp:archiveLink "Oxford internal repositories." ;
+ dmp:preservation "Preservation of the data set is guaranteed by archival on a dedicated archive server." ;
+ dmp:openness "DIO is open and free for use." ;
+ dmp:repositoryUrl "https://github.com/aligned-h2020/ALIGNED_Ontologies" ;
+ dmp:growth "The DIO will be revised in M11 and M24 of the ALIGNED project." .
+
+<http://aligned-project.eu/partner/oxse>
+ rdf:type dataid:Publisher ;
+ dataid:agentName "University of Oxford Software Engineering" ;
+ dataid:agentMail "Monika.Solanki@cs.ox.ac.uk" .
+
+<http://aligned-project.eu/member/msolaniki>
+ rdf:type dataid:Maintainer ;
+ dataid:agentName "Monika Solaniki" ;
+ dataid:agentMail "Monika.Solanki@cs.ox.ac.uk" .

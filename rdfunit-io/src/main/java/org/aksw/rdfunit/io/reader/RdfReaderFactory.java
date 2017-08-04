@@ -96,11 +96,25 @@ public final class RdfReaderFactory {
      */
     public static RdfReader createDereferenceReader(String uri) {
         Collection<RdfReader> readers = new ArrayList<>();
-        if (!IOUtils.isFile(uri)) {
+
+        // Check if there is not a file within that uri. Basically uri can be one of -s prefix or can be -u
+        // than add a RdfDereferenceReader which has a uri into Collection<RdfReader> readers
+        if (!IOUtils.isFile(uri)) { // if the address is not exist
+            // IOUtils.isFile(uri) = new File(uri).exists()
+            // new File(uri) creates a new file instance by converting the given pathname string into an abstract pathname.
+            // File.exists() tests whether the file or directory denoted by this abstract pathname exists
+
             readers.add(new RdfDereferenceReader(uri));
             //readers.add(new RDFaReader(uri));
         } else {
+
+            // RdfStreamReader has a (InputStream, String format).
+            // new RdfStreamReader(uri) generates (InputStream, String format()) according to uri(called "filename" in RdfStreamReader() )
+            // in RdfStreamReader.java, String format == String extension; (e.g. "TURTLE")
             readers.add(new RdfStreamReader(uri));
+
+            /* totally same RdfStreamReader is added twice?? */
+            /* readers.add(new RdfStreamReader(uri)) == readers.add(RdfReaderFactory.createResourceReader(uri) ?? */
             readers.add(RdfReaderFactory.createResourceReader(uri));
         }
 

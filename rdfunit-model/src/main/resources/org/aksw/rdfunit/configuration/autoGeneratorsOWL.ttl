@@ -13,6 +13,7 @@
 #### rdfs:range pattern
 ##########################################
 
+# 1
 # Class range wrongly defined
 rutg:RDFSRANGEC a rut:TestGenerator ;
     dcterms:description """Generate all rdfs:range constrains defined in a schema (when range is wrongly defined)""" ;
@@ -52,6 +53,7 @@ rutg:RDFSRANGEC a rut:TestGenerator ;
     .
 
 
+# 2
 # Class range missing
 rutg:RDFSRANGEC-MISS a rut:TestGenerator ;
     dcterms:description """Generate all rdfs:range constrains defined in a schema (when range is missing)""" ;
@@ -92,6 +94,7 @@ rutg:RDFSRANGEC-MISS a rut:TestGenerator ;
 #### Literals / Datatypes
 ##########################################
 
+# 3
 # Check for Literal
 rutg:RDFSRANGEL a rut:TestGenerator ;
     dcterms:description """Check all defined Literals if they are indeed literals""" ;
@@ -128,6 +131,7 @@ rutg:RDFSRANGEL a rut:TestGenerator ;
             rut:annotationValue rdqv:RangeDatatypeConstraint] ;
     .
 
+# 4
 # Check for rdf:langString
 rutg:RDFLANGSTRING a rut:TestGenerator ;
     dcterms:description """Check all defined Literals if they are indeed literals""" ;
@@ -145,6 +149,7 @@ rutg:RDFLANGSTRING a rut:TestGenerator ;
             rut:annotationValue rdqv:RangeDatatypeConstraint] ;
     .
 
+# 5
 # Datatype range
 rutg:RDFSRANGED a rut:TestGenerator ;
     dcterms:description """Generate all rdfs:range constrains defined in a schema""" ;
@@ -179,6 +184,7 @@ rutg:RDFSRANGED a rut:TestGenerator ;
 #### NON Literals
 ##########################################
 
+# 6
 # Check for Literal
 rutg:RDFSRANGENL a rut:TestGenerator ;
     dcterms:description """Check all defined URIs if they are indeed URIs""" ;
@@ -213,6 +219,7 @@ rutg:RDFSRANGENL a rut:TestGenerator ;
     .
 
 
+# 7
 ##########################################
 #### rdfs:domain pattern
 ##########################################
@@ -237,6 +244,7 @@ rutg:RDFSDOMAIN a rut:TestGenerator ;
     .
 
 
+# 8
 ##########################################
 #### rdfs:domain missing pattern
 ##########################################
@@ -260,6 +268,7 @@ rutg:RDFSDOMAIN-MISS a rut:TestGenerator ;
             rut:annotationValue rdqv:DomainConstraint] ;
     .
 
+# 9
 ##########################################
 #### owl:disjointClass pattern (1) (without reverse relations)
 ##########################################
@@ -283,6 +292,7 @@ rutg:OWLDISJC1 a rut:TestGenerator ;
         rut:annotationValue rdqv:TypeDisjointConstraint] ;
     .
 
+# 10
 ##########################################
 #### owl:disjointClass pattern (2) (filter out reverse relations)
 ##########################################
@@ -307,6 +317,7 @@ rutg:OWLDISJC2 a rut:TestGenerator ;
         rut:annotationValue rdqv:TypeDisjointConstraint] ;
     .
 
+# 11
 ##########################################
 #### owl:AllDisjointClasses pattern
 ##########################################
@@ -333,6 +344,7 @@ rutg:OWLALLDISJC a rut:TestGenerator ;
     .
 
 
+# 12
 ##########################################
 #### owl:propertyDisjointWith pattern
 ##########################################
@@ -353,6 +365,7 @@ rutg:OWLDISJP a rut:TestGenerator ;
         rut:annotationValue rdqv:PropertyDisjointConstraint] ;
     .
 
+# 13
 ##########################################
 #### owl:AllDisjointProperties pattern
 ##########################################
@@ -377,6 +390,7 @@ rutg:OWLALLDISJP a rut:TestGenerator ;
     .
 
 
+# 14
 ##########################################
 #### owl:complementOf pattern
 ##########################################
@@ -399,6 +413,7 @@ rutg:OWLCOMPL a rut:TestGenerator ;
         rut:annotationValue rdqv:ComplementOfConstraint] ;
     .
 
+# 15
 ##########################################
 #### owl cardinality constrains generators
 ##########################################
@@ -424,6 +439,7 @@ rutg:OWLCARD a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 16
 # owl:cardinality number > 0 (exists in db)
 rutg:OWLCARDEX a rut:TestGenerator ;
     dcterms:description """ Generates owl:cardinality constrains. We ensure that the property exists at least once""" ;
@@ -445,6 +461,7 @@ rutg:OWLCARDEX a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 17
 # owl:cardinality number = 0 (must not exist)
 rutg:OWLCARD0 a rut:TestGenerator ;
     dcterms:description """ Generates owl:cardinality constrains. We ensure that the cardinality is 0""" ;
@@ -466,6 +483,7 @@ rutg:OWLCARD0 a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 18
 # owl:minCardinality number > 0 (count restriction if exists)
 rutg:OWLCARD-MIN a rut:TestGenerator ;
     dcterms:description """Generates owl:minCardinality constrains defined in a schema""" ;
@@ -487,6 +505,7 @@ rutg:OWLCARD-MIN a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 19
 # owl:minCardinality number > 0 (exists in db)
 rutg:OWLCARDEX-MIN a rut:TestGenerator ;
     dcterms:description """ Generates owl:minCardinality constrains. We ensure that the property exists at least once""" ;
@@ -508,6 +527,7 @@ rutg:OWLCARDEX-MIN a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 20
 # owl:manCardinality number > 0 (count restriction if exists)
 rutg:OWLCGARD-MAX a rut:TestGenerator ;
     dcterms:description """Generates owl:cardinality constrains defined in a schema""" ;
@@ -529,6 +549,7 @@ rutg:OWLCGARD-MAX a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 21
 # owl:maxCardinality number = 0 (must not exist)
 rutg:OWLCARD-MAX0 a rut:TestGenerator ;
     dcterms:description """ Generates owl:cardinality constrains. We ensure that the cardinality < 0""" ;
@@ -554,6 +575,7 @@ rutg:OWLCARD-MAX0 a rut:TestGenerator ;
 #### owl qualified cardinality constrains generators  (onClass)
 ##########################################
 
+# 22
 # owl:qualifiedCardinality number > 0 (count restriction if exists)
 rutg:OWLQCARD a rut:TestGenerator ;
     dcterms:description """Generates owl:qualifiedCardinality constrains defined in a schema""" ;
@@ -577,6 +599,7 @@ rutg:OWLQCARD a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 23
 # owl:qualifiedCardinality number > 0 (exists in db)
 rutg:OWLQCARDEX a rut:TestGenerator ;
     dcterms:description """ Generates owl:qualifiedCardinality constrains. We ensure that the property exists at least once""" ;
@@ -600,6 +623,7 @@ rutg:OWLQCARDEX a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 24
 # owl:qualifiedCardinality number = 0 (must not exist)
 rutg:OWLQCARD0 a rut:TestGenerator ;
     dcterms:description """ Generates owl:qualifiedCardinality constrains. We ensure that the qualifiedCardinality is 0""" ;
@@ -623,6 +647,7 @@ rutg:OWLQCARD0 a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 25
 # owl:minQualifiedCardinality number > 0 (count restriction if exists)
 rutg:OWLQCARD-MIN a rut:TestGenerator ;
     dcterms:description """Generates owl:minQualifiedCardinality constrains defined in a schema""" ;
@@ -646,6 +671,7 @@ rutg:OWLQCARD-MIN a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 26
 # owl:minQualifiedCardinality number > 0 (exists in db)
 rutg:OWLQCARDEX-MIN a rut:TestGenerator ;
     dcterms:description """ Generates owl:minQualifiedCardinality constrains. We ensure that the property exists at least once""" ;
@@ -669,6 +695,7 @@ rutg:OWLQCARDEX-MIN a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 27
 # owl:maxQualifiedCardinality number > 0 (count restriction if exists)
 rutg:OWLQCARD-MAX a rut:TestGenerator ;
     dcterms:description """Generates owl:maxQualifiedCardinality constrains defined in a schema""" ;
@@ -693,6 +720,7 @@ rutg:OWLQCARD-MAX a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 28
 # owl:maxQualifiedCardinality number = 0 (must not exist)
 rutg:OWLQCARD-MAX0 a rut:TestGenerator ;
     dcterms:description """ Generates owl:maxQualifiedCardinality constrains. We ensure that the cardinality < 0""" ;
@@ -717,6 +745,7 @@ rutg:OWLQCARD-MAX0 a rut:TestGenerator ;
     .
 
 
+# 29
 ##########################################
 #### owl functional property constrains generators
 ##########################################
@@ -737,6 +766,7 @@ rutg:OWLFUNC a rut:TestGenerator ;
         rut:annotationValue rdqv:CardinalityConstraint] ;
     .
 
+# 30
 ################################################################################
 ### owl inverse functional property constraints generator
 ################################################################################
@@ -758,6 +788,7 @@ rutg:OWLINVFUNC a rut:TestGenerator ;
     .
 
 
+# 31
 ################################################################################
 #### owl symmetric property constraints generator
 ################################################################################
@@ -775,6 +806,7 @@ rutg:OWLSYMMETRICPROP a rut:TestGenerator ;
     .
 
 
+# 32
 ################################################################################
 #### owl asymmetric property constraints generator
 ################################################################################
@@ -809,6 +841,7 @@ rutg:OWLASYMMETRICPROP a rut:TestGenerator ;
 #    rut:basedOnPattern rutp:OWLTRANSPROP .
 
 
+# 33
 ################################################################################
 #### owl irreflexive property constrains generator
 ################################################################################
@@ -830,6 +863,7 @@ rutg:OWLIRREFLEXIVE a rut:TestGenerator ;
     .
 
 
+# 34
 ################################################################################
 #### owl DeprecatedProperty warning
 ################################################################################

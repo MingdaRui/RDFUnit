@@ -1,0 +1,68 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747> a dcat:Dataset ;
+    dc:modified "2016-07-30T07:32:46.512784"^^xsd:dateTime ;
+    dcat:contactPoint [ a vcard:Organization ;
+        vcard:hasEmail "opendata@fundacionctic.org" ;
+        vcard:fn "Fundacion CTIC"
+    ] ;
+    dcat:distribution <https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747/resource/dcb61322-83e1-4a92-9c17-72d5d30e0bb4>, 
+        <https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747/resource/3b3e1619-e883-4c78-8784-290672f88846>, 
+        <https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747/resource/9c944431-bc53-47c8-a71d-3d219a735ff8>, 
+        <https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747/resource/78b88352-0fe4-472f-b74f-b94b6b3a870b> ;
+    dcat:keyword "no-provenance-metadata", 
+        "format-dcterms", 
+        "license-metadata", 
+        "published-by-producer", 
+        "lod", 
+        "lodcloud-diagram-2014-08-30", 
+        "format-rdf", 
+        "format-foaf", 
+        "no-vocab-mappings", 
+        "deref-vocab", 
+        "government", 
+        "geographic" ;
+  dc:identifier "a0253e1d-e3f1-4a5e-833d-34bcc0881747" ;
+  dc:title "CTIC Public Dataset Catalogs" ;
+  dcat:landingPage <http://datos.fundacionctic.org/en/> ;
+  dc:issued "2011-07-19T08:49:39.965316"^^xsd:dateTime ;
+  owl:versionInfo "24 Jun 2011" ;
+  dc:publisher <https://datahub.io/organization/94d03217-717d-41ce-a20c-00e754e94183> ;
+  dc:description "Overview of worldwide data catalogues." .
+
+<https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747/resource/dcb61322-83e1-4a92-9c17-72d5d30e0bb4>
+  a dcat:Distribution ;
+  dcat:mediaType "example/rdf+xml" ;
+  dcat:accessURL <http://data.fundacionctic.org/sparql?default-graph-uri=&query=describe+%3Fcatalog+%3Fspatial+%3FparentCountry%0D%0Awhere+%7B%0D%0A%3Fcatalog+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fidentifier%3E+%22zaragoza.es%22%3B%0D%0A%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fspatial%3E+%3Fspatial.%0D%0A%0D%0A%3Fspatial+%3Chttp%3A%2F%2Fsws.geonames.org%2Fontology%23parentCountry%3E+%3FparentCountry.%0D%0A%0D%0A%7D&format=rdf> ;
+  dc:description "Description of the Open Data Portal and catalogue of Saragossa (Zaragoza)" ;
+  dcat:byteSize 4796.0 ;
+  dc:title "Example: City of Saragossa Open Data initiative" .
+
+<https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747/resource/3b3e1619-e883-4c78-8784-290672f88846>
+  a dcat:Distribution ;
+  dc:format "RDF" ;
+  dcat:accessURL <http://data.fundacionctic.org/sparql?query=select+*+where+>, <http://data.fundacionctic.org/vocab/catalog/datasets%23Catalog%3E;+%3Fp+%3Fo.> ;
+  dc:description "Download link of rdf file" .
+
+<https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747/resource/9c944431-bc53-47c8-a71d-3d219a735ff8>
+  a dcat:Distribution ;
+  dcat:mediaType "example/rdf+xml" ;
+  dc:description "Example link RDF/XML" ;
+  dcat:accessURL <http://data.fundacionctic.org/sparql?default-graph-uri=http%3A%2F%2Fdata.fundacionctic.org%2Fdataset-catalog&query=DESCRIBE%20%3Chttp%3A%2F%2Fdata.fundacionctic.org%2Fdataset-catalog%2Ftoronto.ca%3E&output=rdf> ;
+  dcat:byteSize 3055.0 .
+
+<https://datahub.io/organization/94d03217-717d-41ce-a20c-00e754e94183>
+  a foaf:Organization ;
+  foaf:name "Global" .
+
+<https://datahub.io/dataset/a0253e1d-e3f1-4a5e-833d-34bcc0881747/resource/78b88352-0fe4-472f-b74f-b94b6b3a870b>
+  a dcat:Distribution ;
+  dc:description "Sparql endpoint" ;
+  dcat:accessURL <http://data.fundacionctic.org/sparql> ;
+  dcat:mediaType "api/sparql" ;
+  dcat:byteSize 20.0 .

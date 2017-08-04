@@ -12,6 +12,6 @@ import lombok.Value;
  */
 @Value
 class SourceConfig {
-    @Getter @NonNull private final String prefix;
-    @Getter @NonNull private final String uri;
+    @Getter @NonNull private final String prefix; // SchemaService.schemata.prefix
+    @Getter @NonNull private final String uri; // SchemaService.schemata.namespace
 }

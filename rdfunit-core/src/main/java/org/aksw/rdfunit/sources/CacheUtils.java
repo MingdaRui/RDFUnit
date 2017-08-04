@@ -26,7 +26,11 @@ public final class CacheUtils {
      * @return a {@link java.lang.String} object.
      */
     public static String getSchemaSourceCacheFilename(String testFolder, TestAppliesTo schemaType, String prefix, String uri) {
-        return testFolder + schemaType.name() + "/" + UriToPathUtils.getCacheFolderForURI(uri) + prefix + ".cache." + schemaType.name() + ".ttl";
+
+        // File address: testFolder + schemaType.name() + "/" + UriToPathUtils.getCacheFolderForURI(uri)
+        // File name: prefix + ".cache." + schemaType.name() + ".ttl";
+        return testFolder + schemaType.name() + "/" + UriToPathUtils.getCacheFolderForURI(uri) + //File address
+                prefix + ".cache." + schemaType.name() + ".ttl"; // File name
     }
 
     /**

@@ -87,7 +87,9 @@ public class TestGeneratorExecutor {
      */
     public TestSuite generateTestSuite(String testFolder, TestSource dataset, Collection<TestGenerator> autoGenerators) {
 
-        Collection<SchemaSource> sources = dataset.getReferencesSchemata();
+        /*MD*/  LOGGER.info("****\n8. TestSuite.generateTestSuite(RDFUnitConfiguration.getTestFolder(), TestSource, RdfUnit.getAutoGenerators()\n****");
+
+        Collection<SchemaSource> sources /*-s*/ = dataset.getReferencesSchemata();
 
 
         /*notify start of testing */
@@ -96,7 +98,7 @@ public class TestGeneratorExecutor {
         }
 
         Collection<TestCase> allTests = new ArrayList<>();
-        for (SchemaSource s : sources) {
+        for (SchemaSource s : sources) { /*MD*/ // if SchemaSource has RdfReadAndCacheReader, it will write schema into disk
             if (isCanceled) {
                 break;
             }
@@ -151,7 +153,7 @@ public class TestGeneratorExecutor {
             if (!loadFromCache) {
                 cachedTestsLocation = ""; // non existing path
             }
-            Collection<TestCase> testsAutoCached = TestUtils.instantiateTestsFromModel(
+            Collection<TestCase> testsAutoCached = TestUtils.instantiateTestsFromModel( /*MD*/ // This is where we generate test case
                     new RdfStreamReader(cachedTestsLocation).read());
             tests.addAll(testsAutoCached);
             LOGGER.info("{} contains {} automatically created tests (loaded from cache)", s.getUri(), testsAutoCached.size());

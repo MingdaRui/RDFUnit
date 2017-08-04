@@ -53,7 +53,7 @@ public class TestGeneratorTCInstantiator {
         for (TestGenerator tg : testGenerators) {
             Pattern tgPattern = tg.getPattern();
 
-            Query q = QueryFactory.create(PrefixNSService.getSparqlPrefixDecl() + tg.getQuery());
+            Query q = QueryFactory.create(PrefixNSService.getSparqlPrefixDecl() + tg.getQuery()); /*MD*/ // PrefixNSService.getSparqlPrefixDecl() get prefixes and there URI from prefixes.ttl, and add them in front of autoGenerator's query
             QueryExecution qe = new QueryExecutionFactoryModel(source.getModel()).createQueryExecution(q);
             qe.execSelect().forEachRemaining(result -> {
 

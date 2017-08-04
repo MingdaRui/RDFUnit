@@ -47,6 +47,9 @@ public final class LOVEndpoint {
 
         try (QueryExecution qe = qef.createQueryExecution(LOV_SPARQL_QUERY)) {
 
+
+            // QueryExecution.execSelect() returns a ResultSet, ResultSet implements Iterator<QuerySolution>
+            // Iterator.forEachRemaining() performs the given action for each remaining element until all elements have been processed or the action throws an exception.
             qe.execSelect().forEachRemaining( row -> {
 
                 String prefix = row.get("vocabPrefix").asLiteral().getLexicalForm();

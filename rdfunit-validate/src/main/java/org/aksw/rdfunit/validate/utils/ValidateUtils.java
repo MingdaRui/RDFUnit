@@ -44,6 +44,9 @@ public final class ValidateUtils {
      * @throws org.apache.commons.cli.ParseException if any.
      */
     public static CommandLine parseArguments(String[] args) throws ParseException {
+
+        LOGGER.info("****\n1. CommandLine commandLine = ValidateUtils.parseArguments(args);\n****\n");
+
         CommandLineParser cliParser = new DefaultParser();
         return cliParser.parse(getCliOptions(), args);
     }
@@ -92,6 +95,8 @@ public final class ValidateUtils {
      */
     public static RDFUnitConfiguration getConfigurationFromArguments(CommandLine commandLine) throws ParameterException {
 
+        LOGGER.info("****\n4. ValidateUtils.getConfigurationFromArguments(commandLine);\n****\n");
+
         checkIfRequiredParametersMissing(commandLine);
 
         RDFUnitConfiguration configuration = readDatasetUriAndInitConfiguration(commandLine);
@@ -116,11 +121,181 @@ public final class ValidateUtils {
         return configuration;
     }
 
-    private static void setCoverageCalculation(CommandLine commandLine, RDFUnitConfiguration configuration) {
-        boolean calculateCoverage = commandLine.hasOption("c");
-        configuration.setCalculateCoverageEnabled(calculateCoverage);
+    // 0
+    private static void checkIfRequiredParametersMissing(CommandLine commandLine) throws ParameterException {
+        if (!commandLine.hasOption("d")) {
+            throw new ParameterException("Error: Required arguments are missing.");
+
+        }
+        if (commandLine.hasOption("e") && commandLine.hasOption("u")) {
+            throw new ParameterException("Error: You have to select either an Endpoint or a Dump URI.");
+        }
+
+        if (commandLine.hasOption("l")) {
+            throw new ParameterException("Option -l was changed to -r, -l is reserved for --logging-level (notice, warn, error)");
+        }
     }
 
+    // 1
+    private static RDFUnitConfiguration readDatasetUriAndInitConfiguration(CommandLine commandLine) {
+        RDFUnitConfiguration configuration;
+        String dataFolder = commandLine.getOptionValue("f", "data/");
+
+        //Dataset URI, important & required (used to associate manual dataset test cases)
+        String datasetURI = commandLine.getOptionValue("d", "");
+        if (!datasetURI.isEmpty() && datasetURI.endsWith("/")) {
+            datasetURI = datasetURI.substring(0, datasetURI.length() - 1);
+        }
+
+        // in RDFUnitConfiguration:
+        // set datasetURI = datasetURI - "/"(at the end of String),
+        // set dataFolder,
+        // set testFolder = dataFolder + "tests/",
+        // set prefix = datasetURI - "http(s)://" - "[?\"'\\/<>*|:#,&]"
+        configuration = new RDFUnitConfiguration(datasetURI, dataFolder);
+        return configuration;
+    }
+
+    // 2
+    private static void setDumpOrSparqlEndpoint(CommandLine commandLine, RDFUnitConfiguration configuration) {
+
+        // Dump location for dump dereferencing (defaults to dataset uri)
+        String customDereferenceURI = commandLine.getOptionValue("u");
+        if (customDereferenceURI != null && !customDereferenceURI.isEmpty()) {
+
+            /*MD*/  LOGGER.info("Goes into setDumpOrSparqlEndpoint(CommandLine commandLine, RDFUnitConfiguration configuration) {}");
+
+            // What this operation does:
+            // 1. RDFUnitConfiguration.testSourceBuilder.setImMemFromUri(customDereferenceURI);
+            //  0). kind of init a RDFUnitConfiguration.TestSourceBuilder
+            //  1). set the TestSourceType -> InMenSingle
+            //  2). set up QueryingConfig
+            //  3). init (RdfReader) TestSourceBuilder.inMemReader = RdfFirstSuccessReader(readers);
+            // 2. RDFUnitConfiguration.customDereferenceURI = customDereferenceURI;
+            configuration.setCustomDereferenceURI(customDereferenceURI);
+        }
+
+        //TODO write annotation for this code block
+        //Endpoint initialization
+        if (commandLine.hasOption('e')) {
+            String endpointURI = commandLine.getOptionValue("e");
+            Collection<String> endpointGraphs = getUriStrs(commandLine.getOptionValue("g", ""));
+            // -g (graphies) are read in as a single String which contains a few ",".
+            // We need to use getUriStrs() to process and separate the Sting by ",".
+
+            configuration.setEndpointConfiguration(endpointURI, endpointGraphs);
+        }
+    }
+
+    // 3
+    // Get parameters from -s command (called prefix within this method), and process them and add them into a RDFUnitConfiguration
+    // All -s schema are stored in the RDFUnitConfiguration.schemas, (Collection<SchemaSource> schemas)
+    // Every SchemaSource is a single prefix info (the full detailed information for each schema)
+    private static void setSchemas(CommandLine commandLine, RDFUnitConfiguration configuration) throws ParameterException {
+
+        if (commandLine.hasOption("s")) {
+
+            /*MD*/  LOGGER.info("Goes into setSchemas(CommandLine commandLine, RDFUnitConfiguration configuration) throws ParameterException {}");
+
+            try {
+                // Get schema list
+                // process the -s parameter, separate them by ",", make them a Collection<String>.
+                Collection<String> schemaUriPrefixes = getUriStrs(commandLine.getOptionValue("s"));
+
+                // set RDFUnitConfiguration.schemas = Collcetion<SchemaSource>
+                // every SchemaSource in the Collection<SchemaSource>, contains a SourceConfig(SchemaService.schemata.prefix, SchemaService.schemata.namespace), a String schema(which is SchemaService.definedBy.definedBy), a RdfReader RdfFirstSuccessReader (which reads in the definedBy) initialized, and a Model
+                // RDFUnitConfiguration.schema store the full details of -s schema
+                configuration.setSchemataFromPrefixes(schemaUriPrefixes);
+            } catch (UndefinedSchemaException e) {
+                throw new ParameterException(e.getMessage(), e);
+            }
+        }
+        // try to guess schemas automatically
+        else {
+            LOGGER.info("Searching for used schemata in dataset");
+
+            // configuration.getTestSource() returns a DumpTestSource
+            configuration.setAutoSchemataFromQEF(configuration.getTestSource().getExecutionFactory());
+        }
+    }
+
+    // 4
+    private static void setEnrichedSchemas(CommandLine commandLine, RDFUnitConfiguration configuration) {
+        //Get enriched schema
+        String enrichedDatasetPrefix = commandLine.getOptionValue("p");
+        configuration.setEnrichedSchema(enrichedDatasetPrefix);
+    }
+
+    // 5
+    private static void setTestExecutionType(CommandLine commandLine, RDFUnitConfiguration configuration) {
+        TestCaseExecutionType resultLevel = TestCaseExecutionType.aggregatedTestCaseResult;
+        if (commandLine.hasOption("r")) {
+            String rl = commandLine.getOptionValue("r", "aggregate");
+            switch (rl.toLowerCase()) {
+                case "status":
+                    resultLevel = TestCaseExecutionType.statusTestCaseResult;
+                    break;
+                case "aggregate":
+                    resultLevel = TestCaseExecutionType.aggregatedTestCaseResult;
+                    break;
+                case "shacl-lite":
+                    resultLevel = TestCaseExecutionType.shaclSimpleTestCaseResult;
+                    break;
+                case "shacllite":
+                    resultLevel = TestCaseExecutionType.shaclSimpleTestCaseResult;
+                    break;
+                case "shacl":
+                    resultLevel = TestCaseExecutionType.shaclFullTestCaseResult;
+                    break;
+                case "rlog":
+                    resultLevel = TestCaseExecutionType.rlogTestCaseResult;
+                    break;
+                case "extended":
+                    resultLevel = TestCaseExecutionType.extendedTestCaseResult;
+                    break;
+                default:
+                    LOGGER.warn("Option --result-level defined but not recognised. Using 'aggregate' by default.");
+                    break;
+            }
+        }
+        configuration.setTestCaseExecutionType(resultLevel);
+    }
+
+    // 6
+    private static void setOutputFormats(CommandLine commandLine, RDFUnitConfiguration configuration) throws ParameterException {
+        // Get output formats (with HTML as default)
+        Collection<String> outputFormats = getUriStrs(commandLine.getOptionValue("o", "html"));
+        try {
+            configuration.setOutputFormatTypes(outputFormats);
+        } catch (UndefinedSerializationException e) {
+            throw new ParameterException(e.getMessage(), e);
+        }
+    }
+
+    // 7
+    private static void setTestAutogetCacheManual(CommandLine commandLine, RDFUnitConfiguration configuration) throws ParameterException {
+        // for automatically generated test cases
+        boolean testCacheEnabled = !commandLine.hasOption("C");
+        configuration.setTestCacheEnabled(testCacheEnabled);
+
+        //Do not use manual tests
+        boolean manualTestsEnabled = !commandLine.hasOption("M");
+        configuration.setManualTestsEnabled(manualTestsEnabled);
+
+        //Do not use automatic tests
+        boolean autoTestsEnabled = !commandLine.hasOption("A");
+        configuration.setAutoTestsEnabled(autoTestsEnabled);
+
+        if (!configuration.isManualTestsEnabled() && !configuration.isAutoTestsEnabled()) {
+            throw new ParameterException("both -M & -A does not make sense");
+        }
+
+        if (!configuration.isAutoTestsEnabled() && configuration.isTestCacheEnabled()) {
+            throw new ParameterException("both -A & -C does not make sense");
+        }
+    }
+
+    // 8
     private static void setQueryTtlCachePaginationLimit(CommandLine commandLine, RDFUnitConfiguration configuration) throws ParameterException {
         // Get query time to live cache option
         String ttlStr = commandLine.getOptionValue("T");
@@ -173,139 +348,13 @@ public final class ValidateUtils {
         }
     }
 
-    private static void setTestAutogetCacheManual(CommandLine commandLine, RDFUnitConfiguration configuration) throws ParameterException {
-        // for automatically generated test cases
-        boolean testCacheEnabled = !commandLine.hasOption("C");
-        configuration.setTestCacheEnabled(testCacheEnabled);
-
-        //Do not use manual tests
-        boolean manualTestsEnabled = !commandLine.hasOption("M");
-        configuration.setManualTestsEnabled(manualTestsEnabled);
-
-        //Do not use automatic tests
-        boolean autoTestsEnabled = !commandLine.hasOption("A");
-        configuration.setAutoTestsEnabled(autoTestsEnabled);
-
-        if (!configuration.isManualTestsEnabled() && !configuration.isAutoTestsEnabled()) {
-            throw new ParameterException("both -M & -A does not make sense");
-        }
-
-        if (!configuration.isAutoTestsEnabled() && configuration.isTestCacheEnabled()) {
-            throw new ParameterException("both -A & -C does not make sense");
-        }
+    // 9
+    private static void setCoverageCalculation(CommandLine commandLine, RDFUnitConfiguration configuration) {
+        boolean calculateCoverage = commandLine.hasOption("c");
+        configuration.setCalculateCoverageEnabled(calculateCoverage);
     }
 
-    private static void setOutputFormats(CommandLine commandLine, RDFUnitConfiguration configuration) throws ParameterException {
-        // Get output formats (with HTML as default)
-        Collection<String> outputFormats = getUriStrs(commandLine.getOptionValue("o", "html"));
-        try {
-            configuration.setOutputFormatTypes(outputFormats);
-        } catch (UndefinedSerializationException e) {
-            throw new ParameterException(e.getMessage(), e);
-        }
-    }
-
-    private static void setTestExecutionType(CommandLine commandLine, RDFUnitConfiguration configuration) {
-        TestCaseExecutionType resultLevel = TestCaseExecutionType.aggregatedTestCaseResult;
-        if (commandLine.hasOption("r")) {
-            String rl = commandLine.getOptionValue("r", "aggregate");
-            switch (rl.toLowerCase()) {
-                case "status":
-                    resultLevel = TestCaseExecutionType.statusTestCaseResult;
-                    break;
-                case "aggregate":
-                    resultLevel = TestCaseExecutionType.aggregatedTestCaseResult;
-                    break;
-                case "shacl-lite":
-                    resultLevel = TestCaseExecutionType.shaclSimpleTestCaseResult;
-                    break;
-                case "shacllite":
-                    resultLevel = TestCaseExecutionType.shaclSimpleTestCaseResult;
-                    break;
-                case "shacl":
-                    resultLevel = TestCaseExecutionType.shaclFullTestCaseResult;
-                    break;
-                case "rlog":
-                    resultLevel = TestCaseExecutionType.rlogTestCaseResult;
-                    break;
-                case "extended":
-                    resultLevel = TestCaseExecutionType.extendedTestCaseResult;
-                    break;
-                default:
-                    LOGGER.warn("Option --result-level defined but not recognised. Using 'aggregate' by default.");
-                    break;
-            }
-        }
-        configuration.setTestCaseExecutionType(resultLevel);
-    }
-
-    private static void setEnrichedSchemas(CommandLine commandLine, RDFUnitConfiguration configuration) {
-        //Get enriched schema
-        String enrichedDatasetPrefix = commandLine.getOptionValue("p");
-        configuration.setEnrichedSchema(enrichedDatasetPrefix);
-    }
-
-    private static void setSchemas(CommandLine commandLine, RDFUnitConfiguration configuration) throws ParameterException {
-        if (commandLine.hasOption("s")) {
-            try {
-                //Get schema list
-                Collection<String> schemaUriPrefixes = getUriStrs(commandLine.getOptionValue("s"));
-                configuration.setSchemataFromPrefixes(schemaUriPrefixes);
-            } catch (UndefinedSchemaException e) {
-                throw new ParameterException(e.getMessage(), e);
-            }
-        }
-        // try to guess schemas automatically
-        else {
-            LOGGER.info("Searching for used schemata in dataset");
-            configuration.setAutoSchemataFromQEF(configuration.getTestSource().getExecutionFactory());
-        }
-    }
-
-    private static void setDumpOrSparqlEndpoint(CommandLine commandLine, RDFUnitConfiguration configuration) {
-        // Dump location for dump dereferencing (defaults to dataset uri)
-        String customDereferenceURI = commandLine.getOptionValue("u");
-        if (customDereferenceURI != null && !customDereferenceURI.isEmpty()) {
-            configuration.setCustomDereferenceURI(customDereferenceURI);
-        }
-
-        //Endpoint initialization
-        if (commandLine.hasOption('e')) {
-            String endpointURI = commandLine.getOptionValue("e");
-            Collection<String> endpointGraphs = getUriStrs(commandLine.getOptionValue("g", ""));
-            configuration.setEndpointConfiguration(endpointURI, endpointGraphs);
-        }
-    }
-
-    private static RDFUnitConfiguration readDatasetUriAndInitConfiguration(CommandLine commandLine) {
-        RDFUnitConfiguration configuration;
-        String dataFolder = commandLine.getOptionValue("f", "data/");
-
-        //Dataset URI, important & required (used to associate manual dataset test cases)
-        String datasetURI = commandLine.getOptionValue("d", "");
-        if (!datasetURI.isEmpty() && datasetURI.endsWith("/")) {
-            datasetURI = datasetURI.substring(0, datasetURI.length() - 1);
-        }
-
-        configuration = new RDFUnitConfiguration(datasetURI, dataFolder);
-        return configuration;
-    }
-
-    private static void checkIfRequiredParametersMissing(CommandLine commandLine) throws ParameterException {
-        if (!commandLine.hasOption("d")) {
-            throw new ParameterException("Error: Required arguments are missing.");
-
-        }
-        if (commandLine.hasOption("e") && commandLine.hasOption("u")) {
-            throw new ParameterException("Error: You have to select either an Endpoint or a Dump URI.");
-        }
-
-        if (commandLine.hasOption("l")) {
-            throw new ParameterException("Option -l was changed to -r, -l is reserved for --logging-level (notice, warn, error)");
-        }
-    }
-
-
+    // Separate String by ","
     private static Collection<String> getUriStrs(String parameterStr) {
         Collection<String> uriStrs = new ArrayList<>();
         if (parameterStr == null) {

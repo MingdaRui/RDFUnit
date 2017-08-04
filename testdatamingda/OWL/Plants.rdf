@@ -1,0 +1,50 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:plants="/mnt/c/RDFUnit/testdatamingda/OWL/">
+
+    <!-- OWL Header Example -->
+    <owl:Ontology rdf:about="/mnt/c/RDFUnit/testdatamingda/OWL/">
+        <dc:title>The LinkedDataTools.com Example Plant Ontology</dc:title>
+        <dc:description>An example ontology written for the LinkeDataTools.com RDFS OWL introduction tutorial</dc:description>
+    </owl:Ontology>
+
+    <!-- OWL Class Definition - Plant Type -->
+    <owl:Class rdf:about="/mnt/c/RDFUnit/testdatamingda/OWL/planttype">
+        
+        <rdfs:label>The plant type</rdfs:label>
+        <rdfs:comment>The class of all plant types.</rdfs:comment>
+
+    </owl:Class>
+
+    <!-- OWL Subclass Definition - Flower -->
+    <owl:Class rdf:about="/mnt/c/RDFUnit/testdatamingda/OWL/flowers">
+
+        <!-- Flowers is a subclassification of planttype -->
+        <rdfs:subClassOf rdf:resource="/mnt/c/RDFUnit/testdatamingda/OWL/planttype"/>
+
+        <rdfs:label>Flowering plants</rdfs:label>
+        <rdfs:comment>Flowering plants, also know as angiosperms.</rdfs:comment>
+
+    </owl:Class>
+
+    <!-- OWL Subclass Definition - Shrub -->
+    <owl:Class rdf:about="/mnt/c/RDFUnit/testdatamingda/OWL/shrubs">
+
+        <!-- Shrubs is a subclassification of planttype -->
+        <rdfs:subClassOf rdf:resource="/mnt/c/RDFUnit/testdatamingda/OWL/planttype"/>
+
+        <rdfs:label>Shrubbery</rdfs:label>
+        <rdfs:comment>Shrubs, a type of plant which branches from the base.</rdfs:comment>
+
+    </owl:Class>
+
+    <!-- Define the family property -->
+    <owl:DatatypeProperty rdf:about="/mnt/c/RDFUnit/testdatamingda/OWL/family"/>
+
+    <!-- Define the similarlyPopularTo property -->
+    <owl:ObjectProperty rdf:about="/mnt/c/RDFUnit/testdatamingda/OWL/similarlyPopularTo"/>
+
+</rdf:RDF>

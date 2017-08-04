@@ -1,0 +1,151 @@
+# https://www.w3.org/TR/vocab-dcat/#Class:_Catalog
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mingda: <http://www.mingdaexmaple.com/> .
+
+####################################
+#### 4.1 Basic Example
+####################################
+
+# This example provides a quick overview of how DCAT might be used to represent a government catalog and its dataset.
+
+# First, the catalog description:
+mingda:catalog
+    a dcat:Catalog ;
+    dct:title "Imaginary Catalog" ;
+    rdfs:label "Imaginary Catalog" ;
+    foaf:homepage <http://example.org/catalog> ;
+    dct:publisher mingda:transparency-office ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+    dcat:dataset mingda:dataset-001 , mingda:dataset-002 , mingda:dataset-003 ;
+    .
+
+#The publisher of the catalog has the relative URI :transparency-office. Further description of the publisher can be provided as in the following example:
+mingda:transparency-office
+    a foaf:Organization ;
+    rdfs:label "Transparency Office" ;
+    .
+
+# The catalog lists each of its datasets via dcat:dataset property. In the example above, an example dataset was mentioned with the relative
+# URI:dataset-001. A possible descritpion of it using DCAT is shown below:
+mingda:dataset-001
+    a dcat:Dataset ;
+    dct:title "Imaginary dataset" ;
+    dcat:keyword "accountability","transparency","payments" ;
+    dct:issued "2001-12-05"^^xsd:date ;
+    dct:modified "2011-12-05"^^xsd:date ;
+    dcat:contactPoint <http://example.org/transparency-office/contact> ;
+    dct:temporal <http:/reference.data.gov.uk/id/quarter/2006-Q1> ;
+    dct:spatial <http://www.geonames.org/6695072> ;
+    dct:publisher mingda:finance-ministry ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+    dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-W> ;
+    dcat:distribution mingda:dataset-001-csv ;
+    .
+
+# In order to express frequency of update in the example above, we chose to use an instance from the Content-ORiented Guidenlines developed as part of
+# the W3C Data Vocabulary efforts. Additionally, we chose to describe the spatial and temporal coverage of the example dataset using URIs from
+# Geonames and the Interval dataset from data.gov.uk, resoectively. A contact point is also provided where comments and feedback about the dataset
+# can be sent. Further details about the contact point, such as email address or telephone number, can be provided using VCard [vcard-rdf].
+
+# The dataset distribution :dataset-001-csv can be downloaded as a 5kb CSV file. This information is represented via an RDF resource of type
+# dcat:Distribution.
+mingda:dataset-001-csv
+    a dcat:Distribution ;
+    dcat:downloadURI <http://www.example.org/files/001.csv> ;
+    dct:title "CSV distribution of imaginary dataset 001" ;
+    dcat:mediaType "text/csv" ;
+    dcat:byteSize "5120"^^xsd:decimal ;
+    .
+
+
+##################################
+#### 4.2 Classifying datasets
+##################################
+
+# The catalog classifies its datasets according to a set of domains represented by the relative URI :themes. SKOS can be used to describe the domains
+# used:
+mingda:catalog dcat:themeTaxonomy mingda:themes .
+
+
+mingda:themes
+    a skos:ConceptScheme ;
+    skos:prefLabel "A set of domains to classify documents" ;
+    .
+
+mingda:dataset-001 dcat:theme mingda:accountability .
+
+# Notice that this dataset is classified under the domain represented by the relative URI :accountability. It is recommended to define the concept as part
+# of the concepts scheme identified by the URI :themes that was used to describe the catalog domains. An example SKOS description:
+mingda:accountability
+    a skos:Concept ;
+    skos:inScheme mingda:themes ;
+    skos:prefLabel "Accountability" ;
+    .
+
+
+#################################################
+#### 4.3 Describing catalog records metadata
+#################################################
+
+# If the catalog pulisher decides to keep metadata describing its records (i.e. the records containing metadata describing the datasets),
+# dcat:CatalogRecord can be used. For example, while :dataset-001 was issued on 2011-12-05, its description on Imaginary Catalog was added on 2011-
+# 12-11. This can be represented by DCAT as in the following:
+mingda:catalog dcat:record mingda:record-001 .
+
+mingda:record-001
+    a dcat:CatalogRecord ;
+    foaf:primaryTopic mingda:dataset-001 ;
+    dct:issued "2011-12-11"^^xsd:date ;
+    .
+
+
+########################################################
+#### 4.4 A dataset available only behind some Web page
+########################################################
+
+# :dataset-002 is available as a CSV file. However :dataset-002 can only be obtained through some Web page where the user needs to click some links, provide 
+# some information and check some boxes before accessing the data 
+mingda:dataset-002
+    a dcat:Dataset ;
+    dcat:landingPage <http://example.org/dataset-002.html> ;
+    dcat:distribution mingda:dataset-002-csv ;
+    .
+
+mingda:dataset-002-csv
+    a dcat:Distribution ;
+    dcat:accessURL <http://example.org/dataset-002.html> ;
+    .
+
+# Notice the use of dcat:landingPage and the definition of the dcat:Distribution instance.
+
+
+######################################################################
+#### 4.5 A dataset available as download and behind some Web page
+######################################################################
+
+# On the other hand, :dataset-003 can be obtained through some landing page but also can be downloaded from a known URL.
+mingda:dataset-003
+    a dcat:Dataset ;
+    dcat:landingPage <http://example.org/dataset-003.html> ;
+    dcat:distribution mingda:dataset-003-csv ;
+    .
+
+mingda:dataset-003-csv
+    a dcat:Distribution ;
+    dcat:downloadURL <http://example.org/dataset-003.csv> ;
+    dcat:mediaType "text.csv" ;
+    .
+
+# Notice that we used dcat:downloadURL with the downloadable distribution and that the other distribution through the landing page does not have to be 
+# defined as a separate dcat:Distribution instance.
+
+# 4. Vocabulary Overview.ttl

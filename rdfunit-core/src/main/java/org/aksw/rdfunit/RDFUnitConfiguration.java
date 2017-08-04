@@ -11,6 +11,8 @@ import org.aksw.rdfunit.sources.*;
 import org.aksw.rdfunit.statistics.NamespaceStatistics;
 import org.aksw.rdfunit.utils.RDFUnitUtils;
 import org.aksw.rdfunit.utils.UriToPathUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -29,13 +31,19 @@ import static com.google.common.base.Preconditions.checkNotNull;
  */
 public class RDFUnitConfiguration {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(RDFUnitConfiguration.class);
+
     /* Main Dataset URI (also used for loading dataset tests) */
-    private final String datasetURI;
+    /* Comes from parameter -d */
+    private final String datasetURI; // -d (already get rid of slash at the end)
+
+    /* A simple processed version of datasetURI (get rid of "http://", replace strange characters with "_") */
     private String prefix = null;
 
     /* folder where we store tests / configuration.  */
-    private final String dataFolder;
-    private final String testFolder;
+    /* Comes from parameter -f */
+    private final String dataFolder; // -f
+    private final String testFolder; // dataFolder + "tests/", default value is "data/" + "tests/"
 
     /* SPARQL endpoint configuration */
     private long endpointQueryDelayMS = -1;
@@ -44,7 +52,8 @@ public class RDFUnitConfiguration {
     private long endpointQueryLimit = -1;
 
     /* Dereference testing (if different from datasetURI) */
-    private String customDereferenceURI = null;
+    /* Comes from parameter -u */
+    private String customDereferenceURI = null; // -u
 
     /* used to cache the test source when we initially do stats for auto loading test cases */
     private TestSource testSource = null;
@@ -101,6 +110,8 @@ public class RDFUnitConfiguration {
         this.testFolder = testFolder;
 
         prefix = UriToPathUtils.getAutoPrefixForURI(datasetURI); // default prefix
+        // Remove "http(s)://" in the datasetURI,
+        // Replace all these "[?\"'\\/<>*|:#,&]" symbols with one white space.
     }
 
     /**
@@ -123,6 +134,13 @@ public class RDFUnitConfiguration {
      */
     public void setCustomDereferenceURI(String customDereferenceURI) {
         this.testSourceBuilder.setImMemFromUri(customDereferenceURI);
+        // In TestSourceBuilder testSourceBuilder.setImMemFromUri(customDereferenceURI), we:
+        // 1. set the testSourceBuilder.TestSourceType{Endpoint, InMemSingle, InMemDataset} (by dafulat, testSourceType = TestSourceType.InMemSingle;)
+        // 2. kind of initialize the QueryingConfig. QueryingConfig has lots of static member variables and functions. And QueryingConfig control query parameter like cacheTTL, delay, etc.
+        // 3. get a RdfFirstSuccessReader(readers) which contains RdfDereferenceReader of RdfStreamReader to read customDereferenceURI(-u parameter).
+        // 4. store the RdfFirstSuccessReader(readers) into TestSourceBuilder.inMemReader
+        // 5. return TestSourceBuilder
+
         this.customDereferenceURI = customDereferenceURI;
     }
 
@@ -187,6 +205,9 @@ public class RDFUnitConfiguration {
      * @throws org.aksw.rdfunit.exceptions.UndefinedSchemaException if any.
      */
     public void setSchemataFromPrefixes(Collection<String> schemaPrefixes) throws UndefinedSchemaException {
+
+        // return a Collection<SchemaSource>,
+        // every SchemaSource in the Collection<SchemaSource>, contains a SourceConfig(SchemaService.schemata.prefix, SchemaService.schemata.namespace), a String schema(which is SchemaService.definedBy.definedBy), a RdfReader RdfFirstSuccessReader (which reads in the definedBy) initialized and a model
         this.schemas = SchemaService.getSourceList(testFolder, schemaPrefixes);
     }
 
@@ -237,6 +258,8 @@ public class RDFUnitConfiguration {
      */
     public TestSource getTestSource() {
 
+        /*MD*/  LOGGER.info("****\n6. RDFUnitConfiguration.getTestSource()\n***");
+
         if (testSource != null) {
             // When we use auto discovery of schemata we create a SchemaSource with no references
             // After we identify the schemata we add them in the existing TestSource to avoid re-loading the source
@@ -247,12 +270,12 @@ public class RDFUnitConfiguration {
             return testSource;
         }
 
-        testSourceBuilder.setPrefixUri(prefix, datasetURI);
-        testSourceBuilder.setReferenceSchemata(getAllSchemata());
+        testSourceBuilder.setPrefixUri(prefix, datasetURI); // Set SourceConfig in testSourceBuilder
+        testSourceBuilder.setReferenceSchemata(getAllSchemata()); // Set Collection<SchemaSource> referenceSchema in testSourceBuilder
         if (customDereferenceURI != null && "-".equals(customDereferenceURI)) {
             testSourceBuilder.setInMemFromPipe();
         }
-        if (getEndpointURI() == null || getEndpointURI().isEmpty()) {
+        if (getEndpointURI() == null || getEndpointURI().isEmpty()) { // get testSourceBuilder.sparqlEndpoint
             String tmpCustomDereferenceURI = datasetURI;
             if (customDereferenceURI != null && !customDereferenceURI.isEmpty()) {
                 tmpCustomDereferenceURI = customDereferenceURI;
@@ -409,6 +432,9 @@ public class RDFUnitConfiguration {
      * @return a  object.
      */
     public String getDataFolder() {
+
+//        LOGGER.info("RDFUnitConfiguration.java -> getDataFolder()");
+
         return dataFolder;
     }
 

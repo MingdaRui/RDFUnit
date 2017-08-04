@@ -1,0 +1,37 @@
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schame#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/cd/elements/1.1/"
+    xmlns:plants="/mnt/c/RDFUnit/testdatamingda/OWL/">
+
+    <!-- Define the Orchid class instance -->
+    <rdf:Description rdf:about="/mnt/c/RDFUnit/testdatamingda/OWL/orchid">
+
+        <!-- Orchid is an individal (instance) of the flowers class -->
+        <rdf:type rdf:resource="/mnt/c/RDFUnit/testdatamingda/OWL/flowers"/>
+
+        <!-- The orchid is part of the 'Orchidaceae' family -->
+        <plants:family>Orchidaceae</plants:family>
+
+        <!-- The orchid is similarly popular to the magnolia -->
+        <plants:similarlyPopularTo rdf:resoure="/mnt/c/RDFUnit/testdatamingda/OWL/magnolia"/>
+
+    </rdf:Description>
+
+    <!-- Define the Magnolia class instance -->
+    <rdf:Description rdf:about="/mnt/c/RDFUnit/testdatamingda/OWL/magnolia">
+
+        <!-- Magnolia is a individual (instance) of the flowers class -->
+        <rdf:type rdf:resource="/mnt/c/RDFUnit/testdatamingda/OWL/flowers"/>
+
+        <!-- The magnolia is part of the 'Magnoliaceae' family -->
+        <plants:family>Magnoliaceae</plants:family>
+
+        <!-- The magnolia is similarly popular to the orchid -->
+        <plants:similarlyPopularTo rdf:resource="/mnt/c/RDFUnit/testdatamingda/OWL/orchid"/>
+
+    </rdf:Description>
+
+
+</rdf:RDF>

@@ -1,0 +1,22 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mingda: <file:///mnt/c/RDFUnit/testdatamingda/SHACL/W3C/> .
+
+mingda:PersonShape
+    a sh:NodeShape ;
+    sh:targetClass mingda:Person ;
+    sh:property [
+        sh:predicate mingda:ssn ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:hasValue "987-65-432A" ;
+        # sh:pattern "^\\d{3}-\\d{2}-\\d{4}$" ;
+    ] ;
+    sh:property [
+        sh:predicate mingda:worksFor ;
+        sh:class mingda:Company ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) .

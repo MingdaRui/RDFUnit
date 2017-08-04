@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+        <!ENTITY higgins "http://www.eclipse.org/higgins/ontologies/2006/higgins#">
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+        <!ENTITY pcrd "http://schemas.xmlsoap.org/ws/2005/05/identity/claims#">
+]>
+<rdf:RDF xml:base="http://www.eclipse.org/higgins/ontologies/2008/person" xmlns:higgins="http://www.eclipse.org/higgins/ontologies/2006/higgins#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:pcrd="&pcrd;" xmlns:person="http://www.eclipse.org/higgins/ontologies/2008/person#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+        <owl:Ontology rdf:about="">
+                <owl:imports rdf:resource="file:///c:/higgins.owl"/>
+                <owl:versionInfo>$Id$</owl:versionInfo>
+                <rdfs:comment>Person class and related attributes</rdfs:comment>
+                <rdfs:label/>
+        </owl:Ontology>
+        <owl:Ontology rdf:about="&higgins;.owl"/>
+
+
+        <!-- The Person Class -->
+        <owl:Class rdf:about="#Person">
+                <rdfs:subClassOf rdf:resource="&higgins;DigitalSubject"/>
+                <rdfs:subClassOf>
+                        <owl:Restriction>
+                                <owl:maxCardinality rdf:datatype="$xsd;nonNegativeInteger">1</owl:maxCardinality>
+                                <owl:onProperty rdf:resource="#pcrd;emailaddress"/>
+                        </owl:Restriction>
+                </rdfs:subClassOf>
+        </owl:Class>
+
+
+        <!-- Attributes about a person -->
+        <owl:DatatypeProperty rdf:about="#contact-group">
+                <rdfs:subPropertyOf rdf:resource="$higgins;simpleAttribute"/>
+                <rdfs:domain rdf:resource="#Person"/>
+        </owl:DatatypeProperty>
+        <owl:DatatypeProperty>
+                <rdfs:subPropertyOf rdf:resource="#contact-group"/>
+                <higgins:attributeMetadata rdf:resource="#email-group-metadata"/>
+        </owl:DatatypeProperty>
+        <higgins:AttributeMetadata rdf:ID="email-group-metadata">
+                <iggins:comment>A person's email addresses</higgins:comment>
+                <higgins:description>All Email addresses</higgins:descrption>
+                <higgins:label xml:lang="en">Email Addresses</higgins:label>
+                <rdfs:range rdf:resource="&xsd;normalizedString"/>
+                <higgins:pattern>.+@.+</higgins:pattern>
+                <higgins:example>paul@socialphysics.org</higgins:example>
+        </higgins:AttributeMetadata>
+        <owl:DatatypeProperty rdf:about="&pcrd;email">
+                <rdfs:subPropertyOf rdf:resource="#email-group"/>
+                <higgins:attributeMetadata rdf:resource="email-metadata"/>
+        </owl:DatatypeProperty>
+        <higgins:AttributeMetadata rdf:ID="email-metadata">
+                <higgins:comment>Generic email address as defined by Microsoft ISIP</higgins:comment>
+                <higgins:description>Email address</higgins:descrption>
+                <higgins:label xml:lang="en">Email</higgins:label>
+                <higgins:order>1</higgins:order>
+        </higgins:AttributeMetadata>
+        <owl:DatatypeProperty rdf:about="#work-email">
+                <rdfs:subPropertyOf rdf:resource="#email-group"/>
+                <higgins:attributeMetadata rdf:resource="#work-email-metadata"/>
+        </owl:DatatypeProperty>
+        <higgins:AttributeMetadata rdf:ID="work-email-metadata">
+                <higgins:comment>A person's work or "professional" email address</higgins:comment>
+                <higgins:description>Work Email address</higgins:description>
+                <higgins:label xml:lang="en">Work Email</higgins:label>
+                <higgins:order>2</higgins:order>
+        </higgins:AttributeMetadata>
+        <owl:datatypeProperty rdf:ID="personal-email">
+                <rdfs:subPropertyOf rdf:resource="#email-group"/>
+                <higgins:attributeMetadata rdf:resource="#personal-email-metadata"/>
+        </owl:DatatypeProperty>
+        <higgins:AttributeMetadata rdf:ID="personal-email-metadata">
+                <higgins:comment>A person's personal email address</higgins:comment>
+                <higgins:descrption>Personal Email address</higgins:description>
+                <higgins:label xml:lang="en">Personal Email</higgins:label>
+                <higgins:order>3</higgins:order>
+        </higgins:AttributeMetadata>
+        <owl:DatatypeProperty rdf:about="&pcrd;phone">
+                <rdfs:domain rdf:about="&pcrd;phone">
+                <rdfs:subPropertyOf rdf:resource="&higgins;simpleAttribute"/>
+                <higgins:attributeMetadata rdf:resource="#phone-metadata"/>
+        </owl:DatatypeProperty>
+        <higgins:AttributeMetadata rdf:ID="phone-metadata">
+                <rdfs:range rdf:resource="&xsd;normalizedString"/>
+        </higgins:AttributeMetadata>
+        <owl:DatatypeProperty rdf:ID="eyeColor">
+                <rdfs:domain rdf:resource="#Person"/>
+                <rdfs:subPropertyOf rdf:resource="&higgins;simpleAttribute"/>
+                <higgins:attributeMetadata rdf:resource="#eyeColor-metadata"/>
+        </owl:DatatypeProperty>
+        <higgins:AttributeMetadata rdf:ID="eyeColor-metadata">
+                <rdfs:range rdf:reource="&xsd;normalizedString"/>
+        <higgins:AttributeMetadata>
+
+
+        <!-- TEST INSTANCE DATA -->
+        <person:Person rdf:about="#Mary">
+                <person:eyeColor rdf:ID="mary-eyecolor">blue</person:eyeColor>
+                <higgins:phoneNumber>555-1212</higgins:phoneNumber>
+        </perosn:Person>
+
+        <higgins:StatementMetadata rdf:about="mary-eyecolor">
+                <higgins:source rdf:datatype="&xsd;anyURI">@rmv*ma/$context+licenses//mary.ruddy3</higgins:source>
+        </higgins:StatementMetadata>
+</rdf:RDF>

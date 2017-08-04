@@ -10,15 +10,15 @@ package org.aksw.rdfunit;
 public final class Resources {
 
     /** Constant <code>ONTOLOGY="/org/aksw/rdfunit/ns/core.ttl"</code> */
-    public static final String ONTOLOGY = "/org/aksw/rdfunit/ns/core.ttl";
+    public static final String ONTOLOGY = "/org/aksw/rdfunit/ns/core.ttl"; // rdfunit-core
 
     /** Constant <code>PATTERNS="/org/aksw/rdfunit/configuration/pattern"{trunked}</code> */
-    public static final String PATTERNS = "/org/aksw/rdfunit/configuration/patterns.ttl";
+    public static final String PATTERNS = "/org/aksw/rdfunit/configuration/patterns.ttl"; // rdfunit-model
     /** Constant <code>PREFIXES="/org/aksw/rdfunit/configuration/prefixe"{trunked}</code> */
-    public static final String PREFIXES = "/org/aksw/rdfunit/configuration/prefixes.ttl";
+        public static final String PREFIXES = "/org/aksw/rdfunit/configuration/prefixes.ttl"; // rdfunit-commons
 
     /** Constant <code>AUTO_GENERATORS_OWL="/org/aksw/rdfunit/configuration/autoGen"{trunked}</code> */
-    public static final String AUTO_GENERATORS_OWL = "/org/aksw/rdfunit/configuration/autoGeneratorsOWL.ttl";
+    public static final String AUTO_GENERATORS_OWL = "/org/aksw/rdfunit/configuration/autoGeneratorsOWL.ttl"; // rdfunit-model
     /** Constant <code>AUTO_GENERATORS_DSP="/org/aksw/rdfunit/configuration/autoGen"{trunked}</code> */
     public static final String AUTO_GENERATORS_DSP = "/org/aksw/rdfunit/configuration/autoGeneratorsDSP.ttl";
     /** Constant <code>AUTO_GENERATORS_RS="/org/aksw/rdfunit/configuration/autoGen"{trunked}</code> */

@@ -5,8 +5,12 @@ import org.apache.jena.query.Dataset;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.shared.NotFoundException;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.util.logging.Logger;
 
 /**
  * <p>RDFDereferenceReader class.</p>
@@ -18,6 +22,9 @@ import java.io.File;
  */
 public class RdfDereferenceReader implements RdfReader {
 
+    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(RdfDereferenceReader.class);
+
+    /*MD*/  public static String RdfReaderName = "RdfDeferenceReader";
     private final String uri;
 
     /**
@@ -27,7 +34,7 @@ public class RdfDereferenceReader implements RdfReader {
      */
     public RdfDereferenceReader(String uri) {
         super();
-        if (IOUtils.isFile(uri)) {
+        if (IOUtils.isFile(uri)) { // if the address does exist.
             this.uri = new File(uri).getAbsolutePath();
         } else {
             this.uri = uri;
@@ -39,6 +46,17 @@ public class RdfDereferenceReader implements RdfReader {
     public void read(Model model) throws RdfReaderException {
         try {
             RDFDataMgr.read(model, uri);
+            // Read triples into a Model from the given location
+
+            /*MD*/ LOGGER.info( "RdfDereferenceReader.read(model, uri)" );
+            /*MD*/ File file = new File("/mnt/c/Users/Mingda Rui/Desktop/Semantic Web/LogFile/");
+            /*MD*/ if (!file.exists()) {
+            /*MD*/     file = new File("c:/Users/Mingda Rui/Desktop/Semantic Web/LogFile/");
+            /*MD*/ }
+            /*MD*/ PrintWriter pw = new PrintWriter(new FileOutputStream(file + "/RdfDereferenceReaderOutput.txt", true));
+            /*MD*/ pw.println(uri);
+            /*MD*/ pw.flush();
+            /*MD*/ pw.close();
 
             // Not found
         } catch (NotFoundException e) {
@@ -76,5 +94,11 @@ public class RdfDereferenceReader implements RdfReader {
         return "RDFDereferenceReader{" +
                 "uri='" + uri + '\'' +
                 '}';
+    }
+
+    /*MD*/
+    @Override
+    public String getRdfReaderName() {
+        return RdfReaderName;
     }
 }

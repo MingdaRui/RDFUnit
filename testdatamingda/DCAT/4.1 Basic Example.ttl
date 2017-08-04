@@ -1,0 +1,67 @@
+# https://www.w3.org/TR/vocab-dcat/#Class:_Catalog
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mingda: <http://www.mingdaexmaple.com/> .
+
+####################################
+#### 4.1 Basic Example
+####################################
+
+# This example provides a quick overview of how DCAT might be used to represent a government catalog and its dataset.
+
+# First, the catalog description:
+mingda:catalog
+    a dcat:Catalog ;
+    dct:title "Imaginary Catalog" ;
+    rdfs:label "Imaginary Catalog" ;
+    foaf:homepage <http://example.org/catalog> ;
+    dct:publisher mingda:transparency-office ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+    dcat:dataset mingda:dataset-001 , mingda:dataset-002 , mingda:dataset-003 ;
+    .
+
+#The publisher of the catalog has the relative URI :transparency-office. Further description of the publisher can be provided as in the following example:
+mingda:transparency-office
+    a foaf:Organization ;
+    rdfs:label "Transparency Office" ;
+    .
+
+# The catalog lists each of its datasets via dcat:dataset property. In the example above, an example dataset was mentioned with the relative
+# URI:dataset-001. A possible descritpion of it using DCAT is shown below:
+mingda:dataset-001
+    a dcat:Dataset ;
+    dct:title "Imaginary dataset" ;
+    dcat:keyword "accountability","transparency","payments" ;
+    dct:issued "2001-12-05"^^xsd:date ;
+    dct:modified "2011-12-05"^^xsd:date ;
+    dcat:contactPoint <http://example.org/transparency-office/contact> ;
+    dct:temporal <http:/reference.data.gov.uk/id/quarter/2006-Q1> ;
+    dct:spatial <http://www.geonames.org/6695072> ;
+    dct:publisher mingda:finance-ministry ;
+    dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+    dct:accrualPeriodicity <http://purl.org/linked-data/sdmx/2009/code#freq-W> ;
+    dcat:distribution mingda:dataset-001-csv ;
+    .
+
+# In order to express frequency of update in the example above, we chose to use an instance from the Content-ORiented Guidenlines developed as part of
+# the W3C Data Vocabulary efforts. Additionally, we chose to describe the spatial and temporal coverage of the example dataset using URIs from
+# Geonames and the Interval dataset from data.gov.uk, resoectively. A contact point is also provided where comments and feedback about the dataset
+# can be sent. Further details about the contact point, such as email address or telephone number, can be provided using VCard [vcard-rdf].
+
+# The dataset distribution :dataset-001-csv can be downloaded as a 5kb CSV file. This information is represented via an RDF resource of type
+# dcat:Distribution.
+mingda:dataset-001-csv
+    a dcat:Distribution ;
+    dcat:downloadURI <http://www.example.org/files/001.csv> ;
+    dct:title "CSV distribution of imaginary dataset 001" ;
+    dcat:mediaType "text/csv" ;
+    dcat:byteSize "5120"^^xsd:decimal ;
+    .

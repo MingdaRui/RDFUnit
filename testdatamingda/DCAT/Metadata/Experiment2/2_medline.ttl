@@ -1,0 +1,50 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datahub.io/dataset/6d5c5dee-491d-4df0-82f1-feddc2392b53> a dcat:Dataset ;
+    dct:description "RDF representation of the Medline catalogue. Information about 19 million articles linked to http://dx.doi.org/ with article identifiers and http://crossref.org/ with journal identifiers." ;
+    dct:identifier "6d5c5dee-491d-4df0-82f1-feddc2392b53" ;
+    dct:issued "2011-05-13T09:33:55.493689"^^xsd:dateTime ;
+    dct:modified "2013-10-10T22:46:46.696373"^^xsd:dateTime ;
+    dct:publisher <https://datahub.io/organization/ed47c074-2073-48d3-b852-03b01bc70703> ;
+    dct:title "medline" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "William Waites" ;
+            vcard:hasEmail "ww@eris.okfn.org" ] ;
+    dcat:distribution <https://datahub.io/dataset/6d5c5dee-491d-4df0-82f1-feddc2392b53/resource/3af9f2ce-beb6-43e5-80fe-e58828184582>,
+        <https://datahub.io/dataset/6d5c5dee-491d-4df0-82f1-feddc2392b53/resource/dfd523ce-11d5-4e55-84a6-bb99b376b62c> ;
+    dcat:keyword "format-bibo",
+        "format-dcat",
+        "format-foaf",
+        "format-rdf",
+        "format-rdfs",
+        "format-void",
+        "lld",
+        "lod" ;
+    dcat:landingPage <http://purl.org/okfn/medline> .
+
+<https://datahub.io/dataset/6d5c5dee-491d-4df0-82f1-feddc2392b53/resource/3af9f2ce-beb6-43e5-80fe-e58828184582> a dcat:Distribution ;
+    dct:description "Catalogue of Medline Datasets" ;
+    dcat:accessURL <http://purl.org/okfn/medline/catalogue> ;
+    dcat:mediaType "api/dcat" .
+
+<https://datahub.io/dataset/6d5c5dee-491d-4df0-82f1-feddc2392b53/resource/dfd523ce-11d5-4e55-84a6-bb99b376b62c> a dcat:Distribution ;
+    dct:description "List of Medline Datasets (HTML, Turtle, JSON)" ;
+    dct:format "auto" ;
+    dcat:accessURL <http://purl.org/okfn/medline/records> .
+
+<https://datahub.io/organization/ed47c074-2073-48d3-b852-03b01bc70703> a foaf:Organization ;
+    foaf:name "Library Linked Data" .

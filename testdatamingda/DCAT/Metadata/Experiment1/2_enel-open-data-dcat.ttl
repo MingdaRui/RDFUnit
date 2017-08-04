@@ -1,0 +1,42 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datahub.io/dataset/18faaeaf-564a-42f3-a9f2-de08abe10801> a dcat:Dataset ;
+    dct:description """Enel shares its corporate data as 鈥淥pen Data鈥�. \r
+This dataset is the Data Catalog Vocabulary for Enel Open Data published on http://data.enel.com/.""" ;
+    dct:identifier "18faaeaf-564a-42f3-a9f2-de08abe10801" ;
+    dct:issued "2013-09-18T16:04:45.288209"^^xsd:dateTime ;
+    dct:modified "2014-02-11T09:46:28.326479"^^xsd:dateTime ;
+    dct:publisher <https://datahub.io/organization/a93bcfcf-db85-40a2-9e94-f4733c91a1bd> ;
+    dct:title "Enel Open Data - DCAT" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "Enel SpA" ] ;
+    dcat:distribution <https://datahub.io/dataset/18faaeaf-564a-42f3-a9f2-de08abe10801/resource/d3895087-af47-4567-ac3d-ccac42dd7321> ;
+    dcat:keyword "e-mobility",
+        "energy and power",
+        "energy and utilities",
+        "opencorporates",
+        "retail",
+        "territory" .
+
+<https://datahub.io/dataset/18faaeaf-564a-42f3-a9f2-de08abe10801/resource/d3895087-af47-4567-ac3d-ccac42dd7321> a dcat:Distribution ;
+    dct:description "Datasets available on http://data.enel.com are described in this Data Catalog Vocabulary. " ;
+    dct:format "RDF" ;
+    dct:title "Data Catalog Vocabulary for Enel Open Data" ;
+    dcat:accessURL <http://data.enel.com/LMF/export/download?context=http%3A%2F%2Fdata.enel.com%2FLMF%2Fcontext%2Fdefault&format=application/rdf%2Bxml> .
+
+<https://datahub.io/organization/a93bcfcf-db85-40a2-9e94-f4733c91a1bd> a foaf:Organization ;
+    foaf:name "Enel SpA" .

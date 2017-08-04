@@ -1,0 +1,66 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285> a dcat:Dataset ;
+    dct:description "This is a dataset containing entities of symptoms and symptom-related facts. It  is extracted from eight mainstream healthcare websites, three Chinese encyclopedia sites as well as Electronic Medical Records (EMRs). It also includes the link results between symptoms in our dataset and concepts in UMLS. We provide lookup interface and SPARQL endpoint for our dataset (http://dsc.nlp-bigdatalab.org:8081/search.html)." ;
+    dct:identifier "003abde3-aa16-4126-a8da-2f5d9e472285" ;
+    dct:issued "2016-05-03T06:58:40.953616"^^xsd:dateTime ;
+    dct:modified "2016-06-16T09:00:15.921111"^^xsd:dateTime ;
+    dct:publisher <https://datahub.io/organization/6f55eae0-5b24-4cf5-a4e2-e5d70ea9e881> ;
+    dct:title "Symptoms in Chinese" ;
+    owl:versionInfo "1.0" ;
+    dcat:contactPoint [ a vcard:Organization ;
+            vcard:fn "Mengjie Wang" ;
+            vcard:hasEmail "wmj_ecust@163.com" ] ;
+    dcat:distribution <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/600164ff-fdf5-40cf-9d03-3efbb7ef4d95>,
+        <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/8d8bf867-23f6-475a-b023-91ec6093b7bf>,
+        <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/9c38197a-c7e0-4d9c-ab27-5005dc8a41ac>,
+        <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/c68762ff-fa0b-443b-882a-f090faab052d>,
+        <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/e902e889-25a5-4320-acf7-dd96a240d61a> ;
+    dcat:keyword "Linked Data",
+        "life science",
+        "symptoms in Chinese" ;
+    dcat:landingPage <http://dsc.nlp-bigdatalab.org:8081/search.html> .
+
+<https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/600164ff-fdf5-40cf-9d03-3efbb7ef4d95> a dcat:Distribution ;
+    dct:format ".txt" ;
+    dct:title "Dataset description in DCAT" ;
+    dcat:accessURL <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/600164ff-fdf5-40cf-9d03-3efbb7ef4d95/download/dataset-description-in-dcat.txt> .
+
+<https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/8d8bf867-23f6-475a-b023-91ec6093b7bf> a dcat:Distribution ;
+    dct:description "Symptom entities, symptom-related entities and their properties in Chinese." ;
+    dct:format "ttl" ;
+    dct:title "Dataset of Symptoms in Chinese" ;
+    dcat:accessURL <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/8d8bf867-23f6-475a-b023-91ec6093b7bf/download/dsc.nlp-bigdatalab.org.rar> .
+
+<https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/9c38197a-c7e0-4d9c-ab27-5005dc8a41ac> a dcat:Distribution ;
+    dct:description "Schema of the dataset" ;
+    dct:format ".txt" ;
+    dcat:accessURL <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/9c38197a-c7e0-4d9c-ab27-5005dc8a41ac/download/dsc-schema.txt> .
+
+<https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/c68762ff-fa0b-443b-882a-f090faab052d> a dcat:Distribution ;
+    dct:format "ttl" ;
+    dct:title "Example" ;
+    dcat:accessURL <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/c68762ff-fa0b-443b-882a-f090faab052d/download/example.ttl> .
+
+<https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/e902e889-25a5-4320-acf7-dd96a240d61a> a dcat:Distribution ;
+    dct:description "We sampled 417 triples from 26445 triples which describe the rdf:type of the instances is symptom for calculating the precision of symptoms. We sampled 423 triples from 364,657 triples which are related to symptom (triples containing rdf:type and same:As are not involved). We sampled 395 triples from 6024 triples which describe the links (sameAs) to UMLS. The precisions are 98%, 96%, 92%." ;
+    dct:format "CSV" ;
+    dct:title "Evaluation results of the dataset" ;
+    dcat:accessURL <https://datahub.io/dataset/003abde3-aa16-4126-a8da-2f5d9e472285/resource/e902e889-25a5-4320-acf7-dd96a240d61a/download/evaluation-results-of-the-dataset.rar> .
+
+<https://datahub.io/organization/6f55eae0-5b24-4cf5-a4e2-e5d70ea9e881> a foaf:Organization ;
+    foaf:name "NLPBD ECUST" .

@@ -12,6 +12,7 @@
 ### see http://www.w3.org/Submission/2014/SUBM-shapes-20140211/#associating-and-applying-shapes
 ############################################
 
+# 1
 # OSLC oslc:range (a single range)
 # Class range wrongly defined (single range)
 rutg:OSLCRANGEC a rut:TestGenerator ;
@@ -38,6 +39,7 @@ rutg:OSLCRANGEC a rut:TestGenerator ;
         rut:annotationValue rlog:ERROR] ;
     .
 
+# 2
 # Class range missing (single range)
 rutg:OSLCRANGEC-MISS a rut:TestGenerator ;
     dcterms:description """Generate all oslc:range constrains defined in a schema (when range is missing)""" ;
@@ -64,6 +66,7 @@ rutg:OSLCRANGEC-MISS a rut:TestGenerator ;
         rut:annotationValue rlog:ERROR] ;
     .
 
+# 3
 # OSLC oslc:valueShape (still like range on typed shapes)
 rutg:OSLCVALUESHAPE a rut:TestGenerator ;
     dcterms:description """Generate all oslc:range constrains defined in a schema (when range is wrongly defined)""" ;
@@ -92,6 +95,7 @@ rutg:OSLCVALUESHAPE a rut:TestGenerator ;
 #############
 # oslc:occurs (oslc:Exactly-one / oslc:One-or-many / oslc:Zero-or-many / oslc:Zero-or-one)
 
+# 4
 # oslc:Exactly-one / oslc:One-or-many (must exist at least once)
 
 rutg:OSLCCARDEX a rut:TestGenerator ;
@@ -111,6 +115,7 @@ rutg:OSLCCARDEX a rut:TestGenerator ;
         rut:annotationValue rlog:ERROR] ;
     .
 
+# 5
 #oslc:Exactly-one (ensure only one)
 rutg:OSLCCARD a rut:TestGenerator ;
     dcterms:description """Generates owl:cardinality constrains defined in a schema""" ;
@@ -128,6 +133,7 @@ rutg:OSLCCARD a rut:TestGenerator ;
         rut:annotationValue rlog:ERROR] ;
     .
 
+# 6
 # oslc:Zero-or-one
 rutg:OSLCGARD-MAX a rut:TestGenerator ;
     dcterms:description """Generates owl:cardinality constrains defined in a schema""" ;
@@ -151,6 +157,7 @@ rutg:OSLCGARD-MAX a rut:TestGenerator ;
 ############################
 
 
+# 7
 # Check for Literal (if not in oslc:AnyResource, oslc:LocalResource, oslc:Resource, then it's a literal)
 rutg:OSLCRANGEL a rut:TestGenerator ;
     dcterms:description """Check all defined Literals if they are indeed literals""" ;
@@ -169,6 +176,7 @@ rutg:OSLCRANGEL a rut:TestGenerator ;
         rut:annotationValue rlog:ERROR] ;
 	.
 
+# 8
 # Check for Literal (if not in oslc:AnyResource, oslc:LocalResource, oslc:Resource, then it's a literal)
 rutg:OSLCRANGEI a rut:TestGenerator ;
     dcterms:description """Check all defined IRIs if they are indeed literals""" ;
@@ -187,6 +195,7 @@ rutg:OSLCRANGEI a rut:TestGenerator ;
         rut:annotationValue rlog:ERROR] ;
 	.
 
+# 9
 # Datatype range (TODO check domain as well / needs new pattern)
 rutg:OSLCRANGED a rut:TestGenerator ;
     dcterms:description """Generate all rdfs:range constrains defined in a schema""" ;
@@ -205,6 +214,7 @@ rutg:OSLCRANGED a rut:TestGenerator ;
         rut:annotationValue rlog:ERROR] ;
     .
 
+# 10
 # Check for blank nodes (oslc:valueType oslc:LocalResource)
 rutg:OSLCRANGE-BLANK a rut:TestGenerator ;
     dcterms:description """Check all defined Literals if they are indeed literals""" ;
@@ -222,6 +232,7 @@ rutg:OSLCRANGE-BLANK a rut:TestGenerator ;
         rut:annotationValue rlog:ERROR] ;
 	.
 
+# 11
 # Check for non-blank nodes (oslc:valueType oslc:Resource => must not be a blank node)
 rutg:OSLCRANGE-RES a rut:TestGenerator ;
     dcterms:description """Check all defined Literals if they are indeed literals""" ;
@@ -244,6 +255,7 @@ rutg:OSLCRANGE-RES a rut:TestGenerator ;
 # OSLC allowedValue / allowedValues
 ############################
 
+# 12
 # Check for Literal (if not in oslc:AnyResource, oslc:LocalResource, oslc:Resource, then it's a literal)
 rutg:OSLCALLOWEDVAL a rut:TestGenerator ;
     dcterms:description """Check all defined Literals if they are indeed literals""" ;

@@ -1,15 +1,26 @@
 #prefix,URI,URL(if URI does not dereference)
 dbo,http://dbpedia.org/ontology/,http://mappings.dbpedia.org/server/ontology/dbpedia.owl
 georss,http://www.georss.org/georss/
-isbd,http://iflastandards.info/ns/isbd/elements/
-lgdo,http://linkedgeodata.org/ontology,http://downloads.linkedgeodata.org/experimental/2013-06-26-lgd-ontology.nt
 lgdm,http://linkedgeodata.org/meta/
 cheminf,http://semanticscience.org/ontology/cheminf,http://semanticscience.org/ontology/cheminf.owl
-rooms,http://vocab.deri.ie/rooms#
 nerd,http://nerd.eurecom.fr/ontology#,http://nerd.eurecom.fr/ontology/nerd-v0.5.n3
 itsrdf,http://www.w3.org/2005/11/its/rdf#,http://www.w3.org/2005/11/its/rdf-content/its-rdf.rdf
 olia,http://purl.org/olia
+ql,http://semweb.mmlab.be/ns/ql#
+rml,http://semweb.mmlab.be/ns/rml#
+
+# Vocabs in the LOV
+isbd,http://iflastandards.info/ns/isbd/elements/
+lgdo,http://linkedgeodata.org/ontology,http://downloads.linkedgeodata.org/experimental/2013-06-26-lgd-ontology.nt
+rooms,http://vocab.deri.ie/rooms#
 nif,http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#,https://raw.github.com/NLP2RDF/ontologies/master/nif-core/nif-core.ttl
 dataid,https://raw.githubusercontent.com/dbpedia/dataId/master/ontology/dataid.ttl
 rr,http://www.w3.org/ns/r2rml#
 foaf,http://xmlns.com/foaf/0.1/
+dcat,http://www.w3.org/ns/dcat#,/mnt/c/RDFUnit/testdatamingda/DCAT/dcat.cache.Schema.ttl
+
+# Mingda Dissertation
+rdfs,http://www.w3.org/2000/01/rdf-schema#
+sh,http://www.w3.org/ns/shacl#
+mingda,file:///mnt/c/RDFUnit/testdatamingda/SHACL/W3C/,/mnt/c/RDFUnit/testdatamingda/SHACL/W3C/SHACLExampleShapesGraph.ttl
+plants,/mnt/c/RDFUnit/testdatamingda/OWL/,/mnt/c/RDFUnit/testdatamingda/OWL/Plants.rdf

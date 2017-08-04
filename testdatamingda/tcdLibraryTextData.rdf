@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/75970">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/75970"/>
+    <rdfs:DOI>http://dx.doi.org/10.1038/sj.bjp.0707130</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections> RSS Feeds Pharmacy and Pharmaceutical Sciences (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>Review Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>British Journal of Pharmacology 150</rdfs:seriesORreportNO>
+    <foaf:author>RADOMSKI MAREK; SANTOS-MARTINEZ MARIA; MEDINA MARTIN CARLOS; CORRIGAN OWEN</foaf:author>
+    <foaf:title>Nanoparticles: pharmacological and toxicological significance</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/75427">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/75427"/>
+    <rdfs:DOI>http://dx.doi.org/10.1093/hmg/ddt620</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections> RSS Feeds Public Health &amp; Primary Care (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>Human Molecular Genetics Epub ahead of print</rdfs:seriesORreportNO>
+    <foaf:author>ZGAGA; LINA</foaf:author>
+    <foaf:title>DNA mismatch repair gene MSH6 implicated in determining age at natural menopause.</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/31974">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/31974"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>RSS Feeds Pure &amp; Applied Mathematics (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>Book Chapter</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>NULL</rdfs:seriesORreportNO>
+    <foaf:author>ZAITSEV; DMITRI</foaf:author>
+    <foaf:title>Actions of groups of birationally extendible automorphisms</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/61642">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/61642"/>
+    <rdfs:DOI>10.1016/j.ejpoleco.2011.10.002</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>RSS Feeds Economics (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>European Journal of Political Economy 28-2</rdfs:seriesORreportNO>
+    <foaf:author>NARCISO; GAIA</foaf:author>
+    <foaf:title>Political institutions, voter turnout, and policy outcomes</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/75780">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/75780"/>
+    <rdfs:DOI>10.1371/journal.pone.0148526</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>RSS Feeds Genetics (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>PloS one 11-2</rdfs:seriesORreportNO>
+    <foaf:author>LABRADOR JUAN</foaf:author>
+    <foaf:title>Tinman Regulates NetrinB in the Cardioblasts of the Drosophila Dorsal Vessel</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/67565">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/67565"/>
+    <rdfs:DOI>http://dx.doi.org/10.1016/j.pdpdt.2012.08.004</rdfs:DOI>
+    <rdfs:availability> Full text available</rdfs:availability>
+    <rdfs:collections>RSS Feeds Chemistry (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>NULL</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>Photodiagnosis and Photodynamic Therapy 10</rdfs:seriesORreportNO>
+    <foaf:author>RADOMSKI MAREK; SENGE MATHIAS</foaf:author>
+    <foaf:title>Platelets, photosensitizers and PDT</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/54964">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/54964"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability> Full text available</rdfs:availability>
+    <rdfs:collections>RSS Feeds Physics (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>Applied Physics Letters 98</rdfs:seriesORreportNO>
+    <foaf:author>COEY JOHN MICHAEL DAVID</foaf:author>
+    <foaf:title>1/f noise in MgO double-barrier magnetic tunnel junctions</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/56436">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/56436"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability> Full text available</rdfs:availability>
+    <rdfs:collections>TRIARC - Edwin Rae Collection (Digital Image Collection)</rdfs:collections>
+    <rdfs:isDefinedBy>Image</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>NULL</rdfs:seriesORreportNO>
+    <foaf:author>Rae Edwin</foaf:author>
+    <foaf:title>Charter Roll of the City of Waterford</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/6455">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/6455"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>NULL</rdfs:availability>
+    <rdfs:collections>NULL</rdfs:collections>
+    <rdfs:isDefinedBy>NULL</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>NULL</rdfs:seriesORreportNO>
+    <foaf:author>McCarth M. D.</foaf:author>
+    <foaf:title>The 1961 Census of Population</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/5197">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/5197"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>Archive JSSISI: 1847- Complete Collection JSSISI: 1937 to 1942, Vol. XVI, Sessions 91st to 95th</rdfs:collections>
+    <rdfs:isDefinedBy>Journal article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>Journal of The Statistical and Social Inquiry Society of Ireland Vol. XVI No. 3 1939/1940</rdfs:seriesORreportNO>
+    <foaf:author> Lyon Stanley; Glenavy Lord; Johnson Thomas; O Buachalla Liam; Coyne E. J.</foaf:author>
+    <foaf:title>ABroadcast dis7cussion on ?unemployment?</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/25441">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/25441"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections> TRIARC - Edwin Rae Collection (Digital Image Collection)</rdfs:collections>
+    <rdfs:isDefinedBy>Image</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>NULL</rdfs:seriesORreportNO>
+    <foaf:author>Rae Edwin</foaf:author>
+    <foaf:title>Franciscan Friary, Ardfert, County Kerry - Nave</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/31981">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/31981"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>RSS Feeds Pure &amp; Applied Mathematics (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>: International Mathematics Research Notes 2003-4</rdfs:seriesORreportNO>
+    <foaf:author>ZAITSEV DMITRI</foaf:author>
+    <foaf:title>Approximation and convergence of formal CR-mappings</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/75998">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/75998"/>
+    <rdfs:DOI>http://www.thno.org/v05p1249.htm</rdfs:DOI>
+    <rdfs:availability> Full text available</rdfs:availability>
+    <rdfs:collections>Administrative Staff Authors (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy> Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>Theranostics 5-11</rdfs:seriesORreportNO>
+    <foaf:author> PRINA MELLO ADRIELE; RADOMSKI MAREK; VOLKOV YURI</foaf:author>
+    <foaf:title>Magnetic Nanoparticles in Cancer Theranostics.</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/25555">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/25555"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability> Full text available</rdfs:availability>
+    <rdfs:collections>TRIARC - Edwin Rae Collection (Digital Image Collection)</rdfs:collections>
+    <rdfs:isDefinedBy>Image</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>NULL</rdfs:seriesORreportNO>
+    <foaf:author>Rae Edwin</foaf:author>
+    <foaf:title>Burnchurch Castle, County Kilkenny</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/72997">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/72997"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections> RSS Feeds Pharmacy and Pharmaceutical Sciences (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy> Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>Bioorganic and Medicinal Chemistry Letters 23</rdfs:seriesORreportNO>
+    <foaf:author> RADOMSKI MAREK; MEDINA MARTIN CARLOS</foaf:author>
+    <foaf:title>MMP inhibition by barbiturate homodimers</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/25421">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/25421"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>TRIARC - Edwin Rae Collection (Digital Image Collection)</rdfs:collections>
+    <rdfs:isDefinedBy>Image</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>NULL</rdfs:seriesORreportNO>
+    <foaf:author>Rae Edwin</foaf:author>
+    <foaf:title>Black Abbey, Kilkenny, County Kilkenny - St. Catherine</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/30594">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/30594"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>RSS Feeds Electronic &amp; Electrical Eng (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>NULL</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>Physical Review E - Statistical, Nonlinear, and Soft Matter Physics 65-3</rdfs:seriesORreportNO>
+    <foaf:author>COFFEY WILLIAM THOMAS; KALYMYKOV YURI PETROVICH</foaf:author>
+    <foaf:title>Inertial effects in anomalous dielectric relaxation</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/68746">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/68746"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>Economic and Social Review Archive: Complete Collection 1969- The Economic and Social Review, Vol. 15, No. 4, 1984</rdfs:collections>
+    <rdfs:isDefinedBy>Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>Economic and Social Review Vol.15 (Issue 4), 1984</rdfs:seriesORreportNO>
+    <foaf:author>Gallagher Michael</foaf:author>
+    <foaf:title>166 who rule - the dail deputies of november 1982</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/16402">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/16402"/>
+    <rdfs:DOI>NULL</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>TRIARC - Edwin Rae Collection (Digital Image Collection)</rdfs:collections>
+    <rdfs:isDefinedBy>Image</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO>NULL</rdfs:seriesORreportNO>
+    <foaf:author>Rae Edwin</foaf:author>
+    <foaf:title>Gowran Church, Gowran, County Kilkenny - Effigy of a Butler Knight, Tomb Surround</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/tara/75431">
+    <rdfs:seeAlso rdf:resource="http://www.tara.tcd.ie/handle/2262/75431"/>
+    <rdfs:DOI>http://dx.doi.org/10.1038/ng.3011</rdfs:DOI>
+    <rdfs:availability>Full text available</rdfs:availability>
+    <rdfs:collections>RSS Feeds Public Health &amp; Primary Care (Scholarly Publications)</rdfs:collections>
+    <rdfs:isDefinedBy>Journal Article</rdfs:isDefinedBy>
+    <rdfs:seriesORreportNO> Nature Genetics 47-7</rdfs:seriesORreportNO>
+    <foaf:author>ZGAGA LINA</foaf:author>
+    <foaf:title>Genome-wide association analysis identifies six new loci associated with forced vital capacity.</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0095/99">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0095&amp;entry_point=99"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0099</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman Lewis L.</foaf:name>
+    <foaf:title>The Cobblers Cure for a Scolding Wife</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0095/126">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0095&amp;entry_point=126"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0126</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman, Lewis L.</foaf:name>
+    <foaf:title>A Quarrel about the Breeches</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0874/880">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0874&amp;entry_point=880"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0880</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Mecham William; Glucksman Lewis L.</foaf:name>
+    <foaf:title>The Members of Parliament for Kent</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0344/356">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0344&amp;entry_point=356"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0356</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Anti-Jacobin Review and Magazine; Glucksman Lewis L.</foaf:name>
+    <foaf:title>An Irish Howl No XIV</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0266/290">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0266&amp;entry_point=290"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0290</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Mecham William; Glucksman Lewis L.; Merry, Tom</foaf:name>
+    <foaf:title>Shooting the rapids</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_1258/1259">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_1258&amp;entry_point=1259"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_1259</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman, Lewis L.</foaf:name>
+    <foaf:title>Peace with Dishonour</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/1034/PapyrusCase54b_07/7">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=1034&amp;pidtopage=PapyrusCase54b_07&amp;entry_point=7"/>
+    <foaf:collectionTitle>World War I Recruiting Posters</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>PapyrusCase54b_07</foaf:digitalNo>
+    <foaf:isPartOf>World War I Recruiting Collection</foaf:isPartOf>
+    <foaf:name>Great Britain. Army</foaf:name>
+    <foaf:title>Cardinal Mercier and Ireland</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0931/931">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0931&amp;entry_point=931"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0931</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman Lewis L.</foaf:name>
+    <foaf:title>The Situation</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0874/874">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0874&amp;entry_point=874"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0874</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Chartran Théobald; Glucksman Lewis L.</foaf:name>
+    <foaf:title>Purse, Pussy, Piety and Prevarication</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/1684/M-A-36_071/29">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=1684&amp;pidtopage=M-A-36_071&amp;entry_point=29"/>
+    <foaf:collectionTitle>NULL</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>M-A-36_029</foaf:digitalNo>
+    <foaf:isPartOf>NULL</foaf:isPartOf>
+    <foaf:name>Perronet Jean-Rodolphe</foaf:name>
+    <foaf:title>Description des projets et de la construction des ponts de Neuilly, de Mantes, d”Orléans &amp; autres;... Tome premier</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0095/95">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0095&amp;entry_point=95"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0095</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman Lewis L.</foaf:name>
+    <foaf:title>A reduced dandy family preparing for the general mourning!</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0931/936">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0931&amp;entry_point=936"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0936</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman Lewis L.; Bridgman G.</foaf:name>
+    <foaf:title>Great fight, between Conservative Ben and Radical William</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_1258/1260">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_1258&amp;entry_point=1260"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_1260</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Mecham, William; Glucksman Lewis L.; Merry, Tom</foaf:name>
+    <foaf:title>A Modern Moses</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/1007/OLSX-1-531_084/85">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=1007&amp;pidtopage=OLSX-1-531_084&amp;entry_point=85"/>
+    <foaf:collectionTitle>Cashel Ballads, Vol. 2</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLSX-1-531_084</foaf:digitalNo>
+    <foaf:isPartOf>J.D. White Collection</foaf:isPartOf>
+    <foaf:name>White John Davis</foaf:name>
+    <foaf:title>The cruel father or the affectionate lover</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0631/635">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0631&amp;entry_point=635"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0635</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman, Lewis L.</foaf:name>
+    <foaf:title>French Travelling</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/1034/PapyrusCase54b_07/30">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=1034&amp;pidtopage=PapyrusCase54b_07&amp;entry_point=30"/>
+    <foaf:collectionTitle>World War I Recruiting Posters</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>PapyrusCase54b_30</foaf:digitalNo>
+    <foaf:isPartOf>World War I Recruiting Collection</foaf:isPartOf>
+    <foaf:name>Great Britain. Army.</foaf:name>
+    <foaf:title>A call from the trenches</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0266/301">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0266&amp;entry_point=301"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0301</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman Lewis L.</foaf:name>
+    <foaf:title>Invasion of Shorthorns</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/CARI-ROB_0631/631">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=CARI-ROB_0631&amp;entry_point=631"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0631</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman Lewis L.</foaf:name>
+    <foaf:title>Love for Love, Or the Definitive Treaties signed and sealed</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/775/OLS-CARI-ROB_0344&amp;/48">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=775&amp;pidtopage=OLS-CARI-ROB_0344&amp;entry_point=348"/>
+    <foaf:collectionTitle>Robinson Collection of Caricatures</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>OLS-CARI-ROB_0348</foaf:digitalNo>
+    <foaf:isPartOf>Collection of Caricatures</foaf:isPartOf>
+    <foaf:name>Robinson Nicholas K.; Glucksman Lewis L.</foaf:name>
+    <foaf:title>John Bull learning a New Movement against the next Campaign</foaf:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.tcd.ie/resource/digitalcollection/1684/M-A-36_071/189">
+    <foaf:isPrimaryTopicOf rdf:resource="http://digitalcollections.tcd.ie/home/#folder_id=1684&amp;pidtopage=M-A-36_071&amp;entry_point=189"/>
+    <foaf:collectionTitle>NULL</foaf:collectionTitle>
+    <foaf:department>Early Printed Books, Trinity College Library, Dublin</foaf:department>
+    <foaf:digitalNo>M-A-36_189</foaf:digitalNo>
+    <foaf:isPartOf>NULL</foaf:isPartOf>
+    <foaf:name>Perronet, Jean-Rodolphe</foaf:name>
+    <foaf:title>Description des projets et de la construction des ponts de Neuilly, de Mantes, d”Orléans &amp; autres;... Tome premier</foaf:title>
+  </rdf:Description>
+
+</rdf:RDF>
+
+<!--dataset.rdf-->
