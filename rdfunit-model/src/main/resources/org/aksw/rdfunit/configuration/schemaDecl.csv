@@ -17,10 +17,11 @@ nif,http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#,https://raw.
 dataid,https://raw.githubusercontent.com/dbpedia/dataId/master/ontology/dataid.ttl
 rr,http://www.w3.org/ns/r2rml#
 foaf,http://xmlns.com/foaf/0.1/
-dcat,http://www.w3.org/ns/dcat#,/mnt/c/RDFUnit/testdatamingda/DCAT/dcat.cache.Schema.ttl
+dcat,http://www.w3.org/ns/dcat#,/mnt/c/RDFUnit/rdfunit-model/src/main/resources/org/aksw/rdfunit/configuration/vocabularies/DCAT-AP.ttl
 
 # Mingda Dissertation
 rdfs,http://www.w3.org/2000/01/rdf-schema#
 sh,http://www.w3.org/ns/shacl#
+spdx,http://spdz.org/rdf/terms#
 mingda,file:///mnt/c/RDFUnit/testdatamingda/SHACL/W3C/,/mnt/c/RDFUnit/testdatamingda/SHACL/W3C/SHACLExampleShapesGraph.ttl
 plants,/mnt/c/RDFUnit/testdatamingda/OWL/,/mnt/c/RDFUnit/testdatamingda/OWL/Plants.rdf
